@@ -1,0 +1,48 @@
+.menu {
+    position: relative;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+    & ul {
+        position: inherit;
+    }
+    & li {
+        position: inherit;
+        display: inline;
+        padding: 0 20px;
+        & ::before {
+            content: "";
+            background-color: white;
+            position: absolute;
+            top: 0;
+            left: 50%;
+        }
+        & ::after {
+            content: "";
+            background-color: white;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+        }
+        &:hover {
+            & ::before, & ::after {
+                animation: menu_hover;
+                animation-duration: 0.35s;
+                animation-fill-mode: forwards;
+            }
+        }
+    }
+}
+
+@keyframes menu_hover {
+    from {
+        height: 0;
+        width: 0;
+        left: 50%;
+    }
+    to {
+        height: 3px;
+        width: 100%;
+        left: 0;
+    }
+}

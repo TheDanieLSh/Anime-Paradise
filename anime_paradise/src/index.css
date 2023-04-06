@@ -18,7 +18,6 @@ body {
   background-color: #282c34;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
+@import url(./css/Logo.css);
+@import url(./css/Menu.css);
+@import url(./css/SearchBar.css);

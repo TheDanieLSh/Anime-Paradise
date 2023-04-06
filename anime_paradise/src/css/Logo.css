@@ -18,10 +18,10 @@
 }
 .headerSL {
   position: relative;
-  display: flex;
-  justify-content: center;
+  display: inline-block;
+  left: 50%;
+  transform: translateX(-50%) rotate(-10deg);
   bottom: 40px;
-  transform: rotate(-10deg);
   font-size: 95px;
   font-family: mondayVibes;
   color: #eb317e;

@@ -1,0 +1,19 @@
+.searchForm {
+    position: relative;
+    align-content: center;
+    text-align: center;
+}
+.searchForm input {
+    border-radius: 8px;
+    width: 35vw;
+    height: 4vh;
+    margin-top: 13px;
+    background-color: #f7f5f5;
+}
+.searchForm button {
+    margin-left: 10px;
+    border-radius: 5px;
+    width: 5vw;
+    height: 4.3vh;
+    background-color: #f7f5f5;
+}
