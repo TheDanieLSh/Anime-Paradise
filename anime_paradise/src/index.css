@@ -18,6 +18,13 @@ body {
   background-color: #282c34;
 }
 
+main {
+  margin: 7vh 0;
+}
+
 @import url(./css/Logo.css);
 @import url(./css/Menu.css);
 @import url(./css/SearchBar.css);
+@import url(./css/Bottom.css);
+@import url(./css/GoodsList.css);
+@import url(./css/Pages.css);

@@ -1,0 +1,11 @@
+.list {
+    display: flex;
+    justify-content: center;
+}
+
+.productCard {
+    border: solid white;
+    border-radius: 20px;
+    width: 14vw;
+    height: 37vh;
+}

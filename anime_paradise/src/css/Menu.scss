@@ -5,6 +5,7 @@
     font-size: 30px;
     & ul {
         position: inherit;
+        cursor: pointer;
     }
     & li {
         position: inherit;
@@ -31,6 +32,10 @@
                 animation-fill-mode: forwards;
             }
         }
+    }
+    & a {
+        text-decoration: none;
+        color: white;
     }
 }
 

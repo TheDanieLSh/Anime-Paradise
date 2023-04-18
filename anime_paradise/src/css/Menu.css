@@ -7,6 +7,7 @@
 
 .menu ul {
   position: inherit;
+  cursor: pointer;
 }
 
 .menu li {
@@ -38,6 +39,11 @@
           animation-duration: 0.35s;
   -webkit-animation-fill-mode: forwards;
           animation-fill-mode: forwards;
+}
+
+.menu a {
+  text-decoration: none;
+  color: white;
 }
 
 @-webkit-keyframes menu_hover {

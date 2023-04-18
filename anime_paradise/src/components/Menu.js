@@ -1,21 +1,23 @@
+import { Link } from 'react-router-dom';
+
 function Menu() {
     return (
         <nav className='menu'>
             <ul>
                 <li>
-                    <a>Главная</a>
+                    <Link to="">Главная</Link>
                 </li>
                 <li>
-                    <a>Фигурки</a>
+                    <Link to="figures">Фигурки</Link>
                 </li>
                 <li>
-                    <a>Дакимакуры</a>
+                    <Link to="dakimakuras">Дакимакуры</Link>
                 </li>
                 <li>
-                    <a>Манга</a>
+                    <Link to="manga">Манга</Link>
                 </li>
                 <li>
-                    <a>Прочий мерч</a>
+                    <Link to="other">Прочий мерч</Link>
                 </li>
             </ul>
         </nav>
