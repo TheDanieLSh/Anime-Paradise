@@ -14,25 +14,25 @@ function Pages(props) {
         case 'figures':
             return (
                 <div className="pageContent">
-                    <GoodsList />
+                    <GoodsList goods='figures' />
                 </div>
             );
         case 'dakimakuras':
             return (
                 <div className="pageContent">
-                    <GoodsList />
+                    <GoodsList goods='dakimakuras' />
                 </div>
             );
         case 'manga':
             return (
                 <div className="pageContent">
-                    <GoodsList />
+                    <GoodsList goods='manga' />
                 </div>
             );
         case 'other':
             return (
                 <div className="pageContent">
-                    <GoodsList />
+                    <GoodsList goods='others' />
                 </div>
             );
         default:

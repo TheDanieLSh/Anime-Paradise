@@ -1,0 +1,30 @@
+{
+    "figures": [
+        {
+            "name": "Фигурка Аска 20см",
+            "pic": "/public/product_pics/asuka20cm"
+        }
+    ],
+    "dakimakuras": [
+        {
+            "name": "Наволочка Лиза Genshin Impact",
+            "pic": "/public/product_pics/lisadakimak1"
+        }
+    ],
+    "manga": [
+        {
+            "name": "Манга Атака Титанов книга 1",
+            "pic": "/public/product_pics/aotmanga1"
+        }
+    ],
+    "others": [
+        {
+            "name": "Значок Тацумаки/Торнадо",
+            "pic": "/public/product_pics/tatsumakibadge1"
+        },
+        {
+            "name": "Стикерпак Токийский Гуль",
+            "pic": "/public/product_pics/ghulstickers1"
+        }
+    ]
+}
