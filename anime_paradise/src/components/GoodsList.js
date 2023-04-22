@@ -5,29 +5,23 @@ function GoodsList(props) {
     const goods = props.goods;
     let productCards = [];
 
-    fetch('products.json').then(async response => {
-        setProducts(await response.json());
-    })
-    
     useEffect(() => {
-        if (products != null) {
-            for (let x = 0; x < products[goods].length; x++) {
-                productCards.push(
-                    <div className="productCard" key={x}>
-                        <div className="productPicture">
-                            <img src={products[goods[x].pic]}/></div>
-                        <div className="productName">{products[goods[x].name]}</div>
-                    </div>
-                )
-            }
+        fetch('products.json').then(async response => {
+            setProducts(await response.json());
+        })
+    }, [setProducts])
 
-            return (
-                <div className="list">
-                    {productCards}
+    return (
+        <div className="list">
+            {products && products[goods].map((good, i) => (
+                <div className="productCard" key={i}>
+                    <div className="productPicture">
+                        <img src={good.pic} />
+                    </div>
+                    <p className="productName">{good.name}</p>
                 </div>
-            );
-        }
-    }
+            ))}
+        </div>
     )
 }
 
