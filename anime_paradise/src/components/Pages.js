@@ -6,9 +6,9 @@ function Pages(props) {
             return (
                 <div className="pageContent">
                     <p>Новинки</p>
-                    <GoodsList />
+                    <GoodsList goods="novelties" />
                     <p>Топ продаж</p>
-                    <GoodsList />
+                    <GoodsList goods="hot" />
                 </div>
             );
         case 'figures':
