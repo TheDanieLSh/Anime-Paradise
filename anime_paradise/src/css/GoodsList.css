@@ -6,6 +6,35 @@
 .productCard {
     border: solid white;
     border-radius: 20px;
+    text-align: center;
     width: 14vw;
-    height: 37vh;
+    height: 17vw;
+    margin: 0 2vw;
+} 
+
+.productPicture {
+    display: inline-block;
+    width: 90%;
+    height: 80%;
+    text-align: center;
+    padding: 5% 0;
+}
+
+.productPicture img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+}
+
+.productName {
+    font-size: 1.2vw;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
 }

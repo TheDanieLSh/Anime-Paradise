@@ -2,54 +2,54 @@
     "figures": [
         {
             "name": "Фигурка Аска 20см",
-            "pic": "/public/product_pics/asuka20cm"
+            "pic": "'asuka20cm.jpg'"
         }
     ],
     "dakimakuras": [
         {
             "name": "Наволочка Лиза Genshin Impact",
-            "pic": "/public/product_pics/lisadakimak1"
+            "pic": "'lisadakimak1.jpg'"
         }
     ],
     "manga": [
         {
             "name": "Манга Атака Титанов книга 1",
-            "pic": "/public/product_pics/aotmanga1"
+            "pic": "'/public/product_pics/aotmanga1'"
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "/public/product_pics/opmmanga12"
+            "pic": "'/public/product_pics/opmmanga12'"
         }
     ],
     "others": [
         {
             "name": "Значок Тацумаки/Торнадо",
-            "pic": "/public/product_pics/tatsumakibadge1"
+            "pic": "'/public/product_pics/tatsumakibadge1'"
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "/public/product_pics/ghulstickers1"
+            "pic": "'/public/product_pics/ghulstickers1'"
         }
     ],
     
     "novelties": [
         {
             "name": "Фигурка Аска 20см",
-            "pic": "/public/product_pics/asuka20cm"
+            "pic": "product_pics/asuka20cm.jpg"
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "/public/product_pics/opmmanga12"
+            "pic": "'./public/product_pics/opmmanga12'"
         }
     ],
     "hot": [
         {
             "name": "Наволочка Лиза Genshin Impact",
-            "pic": "/public/product_pics/lisadakimak1"
+            "pic": "product_pics/lisadakimak1.jpg"
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "/public/product_pics/ghulstickers1"
+            "pic": "'./public/product_pics/ghulstickers1'"
         }
     ]
 }

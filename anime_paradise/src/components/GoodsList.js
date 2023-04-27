@@ -15,7 +15,7 @@ function GoodsList(props) {
             {products && products[goods].map((good, i) => (
                 <div className="productCard" key={i}>
                     <div className="productPicture">
-                        <img src={good.pic} />
+                        <img src={good.pic} alt="ОШИБКА" />
                     </div>
                     <p className="productName">{good.name}</p>
                 </div>

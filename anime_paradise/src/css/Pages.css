@@ -1,4 +1,4 @@
-.pageContent p {
+.pageContent > p {
     position: relative;
     padding: 0 1vw;
     color: white;
