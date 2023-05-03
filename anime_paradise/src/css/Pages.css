@@ -1,3 +1,12 @@
+.pageContent {
+    display: flex;
+    justify-content: center;
+}
+
+.pageContent[data-main="true"] {
+    display: block;
+}
+
 .pageContent > p {
     position: relative;
     padding: 0 1vw;

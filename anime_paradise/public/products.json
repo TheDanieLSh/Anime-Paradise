@@ -2,33 +2,53 @@
     "figures": [
         {
             "name": "Фигурка Аска 20см",
-            "pic": "'asuka20cm.jpg'"
+            "pic": "product_pics/asuka20cm.jpg"
         }
     ],
     "dakimakuras": [
         {
             "name": "Наволочка Лиза Genshin Impact",
-            "pic": "'lisadakimak1.jpg'"
+            "pic": "product_pics/lisadakimak1.jpg"
         }
     ],
     "manga": [
         {
             "name": "Манга Атака Титанов книга 1",
-            "pic": "'/public/product_pics/aotmanga1'"
+            "pic": "product_pics/aotmanga1"
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "'/public/product_pics/opmmanga12'"
+            "pic": "product_pics/opmmanga12"
+        },
+        {
+            "name": "Манга Бездомный Бог книга 5",
+            "pic": "product_pics/bezbog5"
+        },
+        {
+            "name": "Манга Тетрадь Смерти книга I",
+            "pic": "product_pics/deathnote1"
+        },
+        {
+            "name": "Манга Тетрадь Смерти. Истории",
+            "pic": "product_pics/deathnotestories"
+        },
+        {
+            "name": "Манга Необъятный Океан книга 2",
+            "pic":"product_pics/ocean2"
+        },
+        {
+            "name": "Манга Стальной Алхимик книга 13",
+            "pic": "product_pics/alchemist13"
         }
     ],
     "others": [
         {
             "name": "Значок Тацумаки/Торнадо",
-            "pic": "'/public/product_pics/tatsumakibadge1'"
+            "pic": "product_pics/tatsumakibadge1"
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "'/public/product_pics/ghulstickers1'"
+            "pic": "product_pics/ghulstickers1"
         }
     ],
     
@@ -39,7 +59,11 @@
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "'./public/product_pics/opmmanga12'"
+            "pic": "product_pics/opmmanga12"
+        },
+        {
+            "name": "Манга Тетрадь Смерти. Истории",
+            "pic": "product_pics/deathnotestories"
         }
     ],
     "hot": [
@@ -49,7 +73,7 @@
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "'./public/product_pics/ghulstickers1'"
+            "pic": "product_pics/ghulstickers1"
         }
     ]
 }

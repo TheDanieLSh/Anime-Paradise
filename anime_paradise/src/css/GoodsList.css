@@ -1,6 +1,8 @@
 .list {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
+    width: 80%;
 }
 
 .productCard {
@@ -9,7 +11,7 @@
     text-align: center;
     width: 14vw;
     height: 17vw;
-    margin: 0 2vw;
+    margin: 1vw 2vw;
 } 
 
 .productPicture {
