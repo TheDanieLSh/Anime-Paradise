@@ -1,13 +1,23 @@
 import { useState, useEffect } from 'react';
+import { useDispatch, useSelector } from 'react-redux';
+import { dataState, fetchProductsReducer, productsFetchAction } from '../redux/fetchProductsReducer';
 
 function GoodsList(props) {
     const goods = props.goods;
-    const [products, setProducts] = useState(null);
+    const dispatch = useDispatch();
+
+    function productsFetch() {
+        return (dispatch) => {
+            fetch('products.json').then(async response => {
+                dispatch(productsFetchAction(await response.json()));
+            })
+        }
+    }
     useEffect(() => {
-        fetch('products.json').then(async response => {
-            setProducts(await response.json());
-        })
-    }, [setProducts])
+        dispatch(productsFetch());
+    }, [])
+    
+    const products = useSelector(dataState => dataState.products);
 
     return (
         <div className="list">
