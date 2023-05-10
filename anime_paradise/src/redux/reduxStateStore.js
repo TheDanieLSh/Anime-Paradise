@@ -1,11 +1,8 @@
-/*import { createStore, combineReducers, applyMiddleware } from 'redux';
-import thunk from 'redux-thunk';
-import {fetchProductsReducer} from './fetchProductsReducer';
+import { configureStore } from "@reduxjs/toolkit"
+import fetchDataReducer from "./fetchDataReducer"
 
-const rootReducer = combineReducers(
-    {
-        fetchProductsReducer,
+export const store = configureStore({
+    reducer: {
+        fetchDataReducer,
     }
-)
-
-export const store = createStore(rootReducer, applyMiddleware(thunk));*/
+})
