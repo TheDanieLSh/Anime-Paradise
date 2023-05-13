@@ -17,27 +17,31 @@ function SearchBar() {
                 }
             })
         }
-        const resultFrame = document.querySelector('.searchList');
+        const resultFrame = document.querySelector('.searchList__inner');
         if ((foundItems.length > 0) && (searchItem.length > 1)) {
             listVisability = true;
-            resultFrame.classList.add('searchList_active');
+            resultFrame.classList.add('searchList__inner_active');
         } else {
             listVisability = false;
-            resultFrame.classList.remove('searchList_active');
+            resultFrame.classList.remove('searchList__inner_active');
         }
         doInputRerender(searchItem);
     }
     
     return (
         <div className="searchBar">
-            <form className="searchForm">
-                <input type="text" onChange={handleChange} />
-                <button type="submit">Поиск</button>
-            </form>
-            <div className="searchList">
-                {listVisability === true && foundItems.map((item, i) => (
-                    <div className="searchListItem" key={i}>{item.name}</div>
-                ))}
+            <div className="searchBar__inner">
+                <form className="searchForm">
+                    <input type="text" onChange={handleChange} />
+                    <button type="submit">Поиск</button>
+                </form>
+                <div className="searchList">
+                    <div className="searchList__inner">
+                        {listVisability === true && foundItems.map((item, i) => (
+                            <div className="searchListItem" key={i}>{item.name}</div>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )
