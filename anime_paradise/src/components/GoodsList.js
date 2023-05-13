@@ -10,7 +10,7 @@ function GoodsList(props) {
         dispatch(fetchProducts());
     }, [])
     
-    const products = useSelector((state) => state.fetchDataReducer.products);
+    const products = useSelector(state => state.fetchDataReducer.products);
 
     return (
         <div className="list">

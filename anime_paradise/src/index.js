@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { Provider } from 'react-redux';
@@ -8,7 +8,7 @@ import Adminka from './components/Adminka';
 import SearchBar from './components/SearchBar';
 import Logo from './components/Logo';
 import Menu from './components/Menu';
-import Pages from './components/Pages';
+import Sections from './components/Sections';
 import Bottom from './components/Bottom';
 import reportWebVitals from './reportWebVitals';
 
@@ -36,11 +36,11 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path='' element={<Pages page='main' />} />
-          <Route path='/figures' element={<Pages page='figures' />} />
-          <Route path='/dakimakuras' element={<Pages page='dakimakuras' />} />
-          <Route path='/manga' element={<Pages page='manga' />} />
-          <Route path='/other' element={<Pages page='other' />} />
+          <Route path='' element={<Sections section='main' />} />
+          <Route path='/figures' element={<Sections section='figures' />} />
+          <Route path='/dakimakuras' element={<Sections section='dakimakuras' />} />
+          <Route path='/manga' element={<Sections section='manga' />} />
+          <Route path='/other' element={<Sections section='other' />} />
         </Routes>
       </main>
       <footer>

@@ -39,6 +39,18 @@
         {
             "name": "Манга Стальной Алхимик книга 13",
             "pic": "product_pics/alchemist13"
+        },
+        {
+            "name": "Манга Человек-Бензопила книга 1",
+            "pic": "product_pics/chainsawman1"
+        },
+        {
+            "name": "Манга Человек-Бензопила книга 7",
+            "pic": "product_pics/chainsawman7"
+        },
+        {
+            "name": "Манга Акира книга 1",
+            "pic": "product_pics/akira1"
         }
     ],
     "others": [

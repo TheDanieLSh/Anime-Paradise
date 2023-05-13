@@ -17,3 +17,27 @@
     height: 4.3vh;
     background-color: #f7f5f5;
 }
+.searchList {
+    position: absolute;
+    top: 6vh;
+    left: 29.1vw;
+    z-index: 1;
+    transform: translateY(-1vw);
+    animation: appearance;
+    animation-duration: 1s;
+}
+.searchListItem {
+    width: 35vw;
+    height: 4vh;
+    border-radius: 8px;
+    background-color: white;
+}
+
+@keyframes appearance {
+    from {
+        transform: translateY(-1vw);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
