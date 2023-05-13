@@ -4,7 +4,6 @@ import Pages from './Pages';
 
 function Sections(props) {
     const params = useParams();
-    console.log(params);
     switch (props.section) {
         case 'main':
             return (
@@ -33,7 +32,7 @@ function Sections(props) {
             return (
                 <div className="pageContent">
                     <GoodsList goods='manga' />
-                    <Pages good='manga' />
+                    <Pages goods='manga' />
                 </div>
             );
         case 'other':

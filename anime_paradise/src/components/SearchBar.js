@@ -17,10 +17,13 @@ function SearchBar() {
                 }
             })
         }
+        const resultFrame = document.querySelector('.searchList');
         if ((foundItems.length > 0) && (searchItem.length > 1)) {
             listVisability = true;
+            resultFrame.classList.add('searchList_active');
         } else {
             listVisability = false;
+            resultFrame.classList.remove('searchList_active');
         }
         doInputRerender(searchItem);
     }

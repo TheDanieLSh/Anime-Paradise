@@ -22,9 +22,15 @@
     top: 6vh;
     left: 29.1vw;
     z-index: 1;
-    transform: translateY(-1vw);
-    animation: appearance;
-    animation-duration: 1s;
+    transition:
+        0.2s ease transform,
+        0.2s ease opacity;
+    transform: translateY(-50%);
+    opacity: 0;
+}
+.searchList_active {
+    transform: translateY(0%);
+    opacity: 1;
 }
 .searchListItem {
     width: 35vw;
@@ -33,11 +39,11 @@
     background-color: white;
 }
 
-@keyframes appearance {
+/* @keyframes appearance {
     from {
         transform: translateY(-1vw);
     }
     to {
         transform: translateY(0);
     }
-}
+} */

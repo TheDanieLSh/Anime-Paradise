@@ -3,7 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { fetchDataReducer, fetchProducts } from '../redux/fetchDataReducer';
 
 function GoodsList(props) {
-    const goods = props.goods;
+    const { goods } = props;
     const dispatch = useDispatch();
 
     useEffect(() => {
