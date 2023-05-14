@@ -22,10 +22,14 @@ main {
   margin: 6vh 0;
 }
 
+.pageList {
+  color: white
+}
+
 @import url(./css/Adminka.css);
 @import url(./css/Logo.css);
 @import url(./css/Menu.css);
 @import url(./css/SearchBar.css);
 @import url(./css/Bottom.css);
 @import url(./css/GoodsList.css);
-@import url(./css/Pages.css);
+@import url(./css/Sections.css);

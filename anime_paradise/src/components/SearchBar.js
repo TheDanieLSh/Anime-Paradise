@@ -17,13 +17,13 @@ function SearchBar() {
                 }
             })
         }
-        const resultFrame = document.querySelector('.searchList');
+        const searchList = document.querySelector('.searchList');
         if ((foundItems.length > 0) && (searchItem.length > 1)) {
             listVisability = true;
-            resultFrame.classList.add('searchList_appearance');
+            searchList.classList.add('searchList_appearance');
         } else {
             listVisability = false;
-            resultFrame.classList.remove('searchList_appearance');
+            searchList.classList.remove('searchList_appearance');
         }
         doInputRerender(searchItem);
     }
