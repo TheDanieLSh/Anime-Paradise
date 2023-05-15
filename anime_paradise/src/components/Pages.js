@@ -6,21 +6,19 @@ function Pages(props) {
     const pageLinks = [];
 
     let numberOfPages = () => {
-        if ((currentProduct.length / 8) % 1 == 0) {
+        if ((currentProduct.length / 8) % 1 === 0) {
             return currentProduct.length / 8
         }
         else return Math.floor((currentProduct.length / 8) + 1)
     }
 
     for (let x = 1; x < (numberOfPages() + 1); x++) {
-        pageLinks.push(x);
+        pageLinks.push(<a className="pageLink">{x}</a>);
     }
     
     return (
         <div className="pageList">
-            {pageLinks.map((link, i) => (
-                <div className="pageLink" key={i}>{pageLinks[link]}</div>
-            ))}
+            {pageLinks}
         </div>
     )
 }

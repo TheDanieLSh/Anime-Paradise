@@ -1,0 +1,14 @@
+.pageList {
+    margin-top: 10px;
+}
+.pageLink {
+    display: inline-block;
+    padding: 0 0.7vw;
+    font-size: 20px;
+    color: white;
+    cursor: pointer;
+  }
+  .pageLink:hover {
+    color: #dbd0d0;
+    text-decoration: underline;
+  }
