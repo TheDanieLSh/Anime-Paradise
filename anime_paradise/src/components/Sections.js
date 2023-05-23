@@ -1,50 +1,47 @@
-import { useParams } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import GoodsList from './GoodsList';
 import Pages from './Pages';
 
-function Sections(props) {
-    const params = useParams();
-    switch (props.section) {
-        case 'main':
-            return (
+function Sections() {
+    return (
+        <Routes>
+            <Route path='' element={<>
                 <div className="pageContent" data-main="true">
                     <p>Новинки</p>
                     <GoodsList goods="novelties" />
                     <p>Топ продаж</p>
                     <GoodsList goods="hot" />
                 </div>
-            );
-        case 'figures':
-            return (
-                <div className="pageContent">
-                    <GoodsList goods='figures' />
-                    <Pages goods='figures' />
+            </>} />
+            <Route path='/:section/:page_number' element={<>
+                <div className='pageContent'>
+                    <GoodsList />
+                    <Pages />
                 </div>
-            );
-        case 'dakimakuras':
-            return (
-                <div className="pageContent">
-                    <GoodsList goods='dakimakuras' />
-                    <Pages goods='dakimakuras' />
-                </div>
-            );
-        case 'manga':
-            return (
-                <div className="pageContent">
-                    <GoodsList goods='manga' />
-                    <Pages goods='manga' />
-                </div>
-            );
-        case 'other':
-            return (
-                <div className="pageContent">
-                    <GoodsList goods='others' />
-                    <Pages goods='others' />
-                </div>
-            );
-        default:
-            return ("ERROR");
-    }
+            </>} />
+        </Routes>
+    )
+
+    // const { section } = useParams();
+    // if (section === '') {
+    //     return (
+    //         <div className="pageContent" data-main="true">
+    //             <p>Новинки</p>
+    //             <GoodsList goods="novelties" />
+    //             <p>Топ продаж</p>
+    //             <GoodsList goods="hot" />
+    //         </div>
+    //     )
+    // } else return (
+    //     <div className='pageContent'>
+    //         <Routes>
+    //             <Route path='/:section/:page_number' element={<>
+    //                 <GoodsList goods={section} />
+    //                 <Pages goods={section} />
+    //             </>} />
+    //         </Routes>
+    //     </div>
+    // )
 }
 
 export default Sections;

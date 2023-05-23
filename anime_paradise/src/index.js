@@ -35,13 +35,14 @@ function App() {
         <Menu />
       </header>
       <main>
-        <Routes>
-          <Route path='' element={<Sections section='main' />} />
+        
+          <Sections />
+          {/* <Route path='' element={<Sections section='main' />} />
           <Route path='/figures' element={<Sections section='figures' />} />
           <Route path='/dakimakuras' element={<Sections section='dakimakuras' />} />
           <Route path='/manga' element={<Sections section='manga' />} />
-          <Route path='/other' element={<Sections section='other' />} />
-        </Routes>
+          <Route path='/other' element={<Sections section='other' />} /> */}
+        
       </main>
       <footer>
         <Bottom />
