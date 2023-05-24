@@ -1,0 +1,203 @@
+{
+  "figures": [
+    {
+      "name": "Sample 1",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 2",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 3",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 4",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 5",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 6",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 7",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 8",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 9",
+      "pic": "product_pics/something"
+    }
+  ],
+  "dakimakuras": [
+    {
+      "name": "Sample 1",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 2",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 3",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 4",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 5",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 6",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 7",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 8",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 9",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 10",
+      "pic": "product_pics/something"
+    }
+  ],
+  "manga": [
+    {
+      "name": "Sample 1",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 2",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 3",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 4",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 5",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 6",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 7",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 8",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 9",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 10",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 11",
+      "pic": "product_pics/something"
+    }
+  ],
+  "other": [
+    {
+      "name": "Sample 1",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 2",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 3",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 4",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 5",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 6",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 7",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 8",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 9",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 10",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 11",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 12",
+      "pic": "product_pics/something"
+    }
+  ],
+
+  "novelties": [
+    {
+      "name": "Sample 1",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 2",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 3",
+      "pic": "product_pics/something"
+    }
+  ],
+  "hot": [
+    {
+      "name": "Sample 4",
+      "pic": "product_pics/something"
+    },
+    {
+      "name": "Sample 5",
+      "pic": "product_pics/something"
+    }
+  ]
+}
