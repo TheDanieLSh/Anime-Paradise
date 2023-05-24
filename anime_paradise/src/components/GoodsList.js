@@ -19,6 +19,11 @@ function GoodsList(props) {
     }, [dispatch])
     
     const products = useSelector(state => state.fetchDataReducer.products);
+
+    let firstProduct;
+    let lastProduct;
+    if ()
+    const currentPageProducts = products.
     
     return (
         <div className="list">
