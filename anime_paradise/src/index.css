@@ -22,7 +22,6 @@ main {
   margin: 6vh 0;
 }
 
-@import url(./css/Adminka.css);
 @import url(./css/Logo.css);
 @import url(./css/Menu.css);
 @import url(./css/SearchBar.css);

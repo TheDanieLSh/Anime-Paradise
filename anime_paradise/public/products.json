@@ -71,11 +71,11 @@
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "product_pics/opmmanga12"
+            "pic": "product_pics/opmmanga12.jpg"
         },
         {
             "name": "Манга Тетрадь Смерти. Истории",
-            "pic": "product_pics/deathnotestories"
+            "pic": "product_pics/deathnotestories.jpg"
         }
     ],
     "hot": [
@@ -85,7 +85,7 @@
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "product_pics/ghulstickers1"
+            "pic": "product_pics/ghoulstickers1.jpg"
         }
     ]
 }
