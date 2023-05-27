@@ -2,90 +2,94 @@
     "figures": [
         {
             "name": "Фигурка Аска 20см",
-            "pic": "product_pics/asuka20cm.jpg"
+            "pic": "/product_pics/asuka20cm.jpg"
         }
     ],
     "dakimakuras": [
         {
             "name": "Наволочка Лиза Genshin Impact",
-            "pic": "product_pics/lisadakimak1.jpg"
+            "pic": "/product_pics/lisadakimak1.jpg"
         }
     ],
     "manga": [
         {
             "name": "Манга Атака Титанов книга 1",
-            "pic": "product_pics/aotmanga1"
+            "pic": "/product_pics/aotmanga1.jpg"
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "product_pics/opmmanga12"
+            "pic": "/product_pics/opmmanga12.jpg"
         },
         {
-            "name": "Манга Бездомный Бог книга 5",
-            "pic": "product_pics/bezbog5"
+            "name": "Манга Атака Титанов книга 11",
+            "pic": "/product_pics/aotmanga11.jpg"
         },
         {
             "name": "Манга Тетрадь Смерти книга I",
-            "pic": "product_pics/deathnote1"
+            "pic": "/product_pics/deathnote1.jpg"
         },
         {
             "name": "Манга Тетрадь Смерти. Истории",
-            "pic": "product_pics/deathnotestories"
+            "pic": "/product_pics/deathnotestories.jpg"
         },
         {
-            "name": "Манга Необъятный Океан книга 2",
-            "pic":"product_pics/ocean2"
+            "name": "Манга Необъятный Океан книга 3",
+            "pic":"/product_pics/ocean3.jpg"
         },
         {
-            "name": "Манга Стальной Алхимик книга 13",
-            "pic": "product_pics/alchemist13"
+            "name": "Манга Стальной Алхимик книга 15",
+            "pic": "/product_pics/alchemist15.jpg"
         },
         {
             "name": "Манга Человек-Бензопила книга 1",
-            "pic": "product_pics/chainsawman1"
+            "pic": "/product_pics/chainsawman1.jpg"
         },
         {
             "name": "Манга Человек-Бензопила книга 7",
-            "pic": "product_pics/chainsawman7"
+            "pic": "/product_pics/chainsawman7.jpg"
         },
         {
             "name": "Манга Акира книга 1",
-            "pic": "product_pics/akira1"
+            "pic": "/product_pics/akira1.jpg"
+        },
+        {
+            "name": "Манга Бездомный Бог книга 5",
+            "pic": "/product_pics/bezbog5.jpg"
         }
     ],
     "other": [
         {
             "name": "Значок Тацумаки/Торнадо",
-            "pic": "product_pics/tatsumakibadge1"
+            "pic": "/product_pics/tatsumakibadge1.jpg"
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "product_pics/ghulstickers1"
+            "pic": "/product_pics/ghoulstickers1.jpg"
         }
     ],
     
     "novelties": [
         {
             "name": "Фигурка Аска 20см",
-            "pic": "product_pics/asuka20cm.jpg"
+            "pic": "/product_pics/asuka20cm.jpg"
         },
         {
             "name": "Манга One Punch Man книга 12",
-            "pic": "product_pics/opmmanga12.jpg"
+            "pic": "/product_pics/opmmanga12.jpg"
         },
         {
             "name": "Манга Тетрадь Смерти. Истории",
-            "pic": "product_pics/deathnotestories.jpg"
+            "pic": "/product_pics/deathnotestories.jpg"
         }
     ],
     "hot": [
         {
             "name": "Наволочка Лиза Genshin Impact",
-            "pic": "product_pics/lisadakimak1.jpg"
+            "pic": "/product_pics/lisadakimak1.jpg"
         },
         {
             "name": "Стикерпак Токийский Гуль",
-            "pic": "product_pics/ghoulstickers1.jpg"
+            "pic": "/product_pics/ghoulstickers1.jpg"
         }
     ]
 }
