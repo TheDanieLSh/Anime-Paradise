@@ -22,6 +22,11 @@ main {
   margin: 6vh 0;
 }
 
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
 @import url(./css/Logo.css);
 @import url(./css/Menu.css);
 @import url(./css/SearchBar.css);
@@ -29,3 +34,4 @@ main {
 @import url(./css/GoodsList.css);
 @import url(./css/Sections.css);
 @import url(./css/Pages.css);
+@import url(./css/ProductPage.css);

@@ -13,10 +13,12 @@
     grid-template-columns: 1fr 7vw;
 }
 .searchForm input {
+    padding-left: 4px;
     border-radius: 8px;
     width: 35vw;
     height: 4vh;
     background-color: #f7f5f5;
+    font-size: 15px;
 }
 .searchForm button {
     margin-left: 10px;
@@ -43,13 +45,14 @@
     opacity: 1;
 }
 .searchListItem {
+    padding-left: 4px;
     width: 35vw;
     height: 4vh;
     border-radius: 8px;
     background-color: white;
-    cursor: pointer;
 }
 .searchListItem:hover {
     color: white;
-    background-color: black;
+    background-color: rgb(36, 35, 35);
+    border: 1px solid white; 
 }

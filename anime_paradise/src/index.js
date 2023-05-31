@@ -1,13 +1,15 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Provider } from 'react-redux';
+import { Provider, useDispatch } from 'react-redux';
+import { fetchProducts } from './redux/fetchDataReducer';
 import { store } from './redux/reduxStateStore';
 import './index.css';
 import SearchBar from './components/SearchBar';
 import Logo from './components/Logo';
 import Menu from './components/Menu';
 import Sections from './components/Sections';
+import ProductPage from './components/ProductPage';
 import Bottom from './components/Bottom';
 import reportWebVitals from './reportWebVitals';
 
@@ -16,20 +18,35 @@ root.render(
   <React.StrictMode>
     <Router>
       <Provider store={store}>
-        <header>
-          <SearchBar />
-          <Logo />
-          <Menu />
-        </header>
-        <main>
-          <Sections />
-        </main>
-        <footer>
-          <Bottom />
-        </footer>
+        <App />
       </Provider>
     </Router>
   </React.StrictMode>
 );
+
+function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch])
+  return (
+    <div>
+      <header>
+        <SearchBar />
+        <Logo />
+        <Menu />
+      </header>
+      <main>
+        <Routes>
+          <Route path='*' element={<Sections />} />
+          <Route path='/:product_id' element={<ProductPage />} />
+        </Routes>
+      </main>
+      <footer>
+        <Bottom />
+      </footer>
+    </div>
+  )
+}
 
 reportWebVitals();

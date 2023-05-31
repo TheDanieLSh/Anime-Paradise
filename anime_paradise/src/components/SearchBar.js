@@ -1,5 +1,6 @@
 import { useSelector } from "react-redux";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 let searchItem;
 let foundItems = [];
@@ -38,7 +39,7 @@ function SearchBar() {
                 <div className="searchList_block">
                     <div className="searchList">
                         {listVisability === true && foundItems.map((item, i) => (
-                            <div className="searchListItem" key={i}>{item.name}</div>
+                            <Link to={"/" + item.id}><div className="searchListItem" key={i}>{item.name}</div></Link>
                         ))}
                     </div>
                 </div>
