@@ -1,0 +1,27 @@
+.productPage {
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    
+    & img {
+        position: relative;
+        width: 30vw;
+        border-radius: 20px;
+        margin-left: 3.5vw;
+    }
+}
+.productInfo {
+    position: relative;
+    margin-left: 3vw;
+    bottom: 1vw;
+}
+.nameHeader {
+    position: relative;
+    font-weight: bold;
+    font-size: 30px;
+}
+.description {
+    position: relative;
+    margin-top: 1vw;
+    font-size: 20px;
+}
