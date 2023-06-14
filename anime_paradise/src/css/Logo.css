@@ -3,7 +3,7 @@
 }
 .headerFL {
   position: relative;
-  font-size: 120px;
+  font-size: 7.5vw;
   font-family: neonblitz;
   color: #e3205a;
   text-align: center;
@@ -24,8 +24,8 @@
   display: inline-block;
   left: 50%;
   transform: translateX(-50%) rotate(-10deg);
-  bottom: 40px;
-  font-size: 95px;
+  bottom: 2.6vw;
+  font-size: 7vw;
   font-family: mondayVibes;
   color: #eb317e;
 }

@@ -1,7 +1,7 @@
 .menu {
   position: relative;
   text-align: center;
-  font-size: 30px;
+  font-size: 2.4vw;
 }
 .menu ul {
   position: inherit;
@@ -10,7 +10,7 @@
 .menu li {
   position: inherit;
   display: inline;
-  padding: 0 20px;
+  padding: 0 1.5vw;
 }
 .menu li ::before {
   content: "";
