@@ -23,7 +23,7 @@
 .searchForm button {
     margin-left: 10px;
     border-radius: 0.5vw;
-    width: 100%;
+    width: 100%; /* непонятка */
     height: 2vw;
     background-color: #f7f5f5;
     font-size: 1vw;
@@ -52,6 +52,7 @@
     height: 2vw;
     border-radius: 0.5vw;
     background-color: white;
+    font-size: 1.1vw;
 }
 .searchListItem:hover {
     color: white;

@@ -1,25 +1,28 @@
 @font-face {
-  font-family: 'neonblitz';
-  src: url(../public/fonts/Neonblitz.ttf);   
+  font-family: "neonblitz";
+  src: url(../public/fonts/Neonblitz.ttf);
 }
 @font-face {
-  font-family: 'mondayVibes';
-  src: url(../public/fonts/MondayVibes.ttf);   
+  font-family: "mondayVibes";
+  src: url(../public/fonts/MondayVibes.ttf);
 }
 
-* {margin: 0; padding: 0; box-sizing: border-box}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+    "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
 }
 
 main {
-  margin: 6vh 0;
+  margin: 2.5vw 0;
 }
 
 p {
@@ -39,3 +42,10 @@ a {
 @import url(./css/Sections.css);
 @import url(./css/Pages.css);
 @import url(./css/ProductPage.css);
+
+@media screen and (max-width: 500px) {
+  .searchForm,
+  .searchList_block {
+    grid-template-columns: 90% 7vw;
+  }
+}
