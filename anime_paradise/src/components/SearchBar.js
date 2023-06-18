@@ -39,7 +39,7 @@ function SearchBar() {
                 <div className="searchList_block">
                     <div className="searchList">
                         {listVisability === true && foundItems.map((item, i) => (
-                            <Link to={"/" + item.id}><div className="searchListItem" key={i}>{item.name}</div></Link>
+                            <Link to={"/" + item.id}><div className="searchListItemBlock"><div className="searchListItem" key={i}>{item.name}</div></div></Link>
                         ))}
                     </div>
                 </div>

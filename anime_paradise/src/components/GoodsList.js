@@ -32,7 +32,9 @@ function GoodsList(props) {
                     <div className="productPicture">
                         <Link to={"/" + good.id}><img src={good.pic} alt="ОШИБКА" /></Link>
                     </div>
-                    <Link to={"/" + good.id}><p className="productName">{good.name}</p></Link>
+                    <div className="productNameBlock">
+                        <Link to={"/" + good.id}><p className="productName">{good.name}</p></Link>
+                    </div>
                 </div>
             ))}
         </div>

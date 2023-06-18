@@ -37,6 +37,10 @@
     }
 }
 
+.mobile_menu {
+    display: none;
+}
+
 @keyframes menu_hover {
     from {
         height: 0;

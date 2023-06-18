@@ -44,8 +44,98 @@ a {
 @import url(./css/ProductPage.css);
 
 @media screen and (max-width: 500px) {
+  .searchBar {
+    width: 100%;
+  }
   .searchForm,
   .searchList_block {
-    grid-template-columns: 90% 7vw;
+    grid-template-columns: 80% 20%;
+  }
+  .searchForm input {
+    height: 10vw;
+    border-radius: 2.5vw;
+    padding-left: 0.7vw;
+    font-size: 4vw;
+  }
+  .searchForm button {
+    height: 10vw;
+    border-radius: 2.5vw;
+    font-size: 4vw;
+  }
+  .searchListItem {
+    width: 80vw;
+    height: 10vw;
+    border-radius: 2.5vw;
+    padding-left: 0.8vw;
+    font-size: 4vw;
+  }
+
+  .headerFL {
+    font-size: 20vw;
+  }
+  .headerSL {
+    font-size: 15vw;
+  }
+
+  .menu {
+    font-size: 8vw;
+  }
+  .menu ul {
+    position: absolute;
+  }
+  .menu li {
+    display: block;
+    position: relative;
+  }
+  .desktop_menu {
+    display: none;
+  }
+  .mobile_menu {
+    display: block;
+  }
+  .menuList {
+    display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .pageContent > p {
+    font-size: 6vw;
+  }
+  .list {
+    flex-direction: column;
+    width: 95%;
+    align-items: center;
+  }
+  .productCard {
+    position: relative;
+    display: flex;
+    width: 100%;
+    height: 30vw;
+    border-radius: 4vw;
+    margin: 1vw 0;
+  }
+  .productPicture {
+    width: 30%;
+    height: 100%;
+    padding: 1%;
+    border-radius: 2vw;
+  }
+  .productPicture img {
+    border-radius: 4vw;
+  }
+  .productNameBlock {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 1%;
+    width: 66%;
+  }
+  .productName {
+    font-size: 6vw;
   }
 }
