@@ -38,9 +38,9 @@ function Menu() {
                     return 'Главная';
             }
         }
-        {
+        return {
             "url": item,
-            "russian": returnRussian();
+            "russian": returnRussian(),
         }
     })
 
@@ -73,7 +73,7 @@ function Menu() {
             <div className='mobile_menu'>
                 <div className='currentSection' onClick={menuAppear}>{sectionName}</div>
                 <ul className='menuList'>
-                    {currentList.map(item => <li key={item}><Link to={ }>{item}</Link></li>)}
+                    {currentList.map(item => <li key={item.url}><Link to={item.url}>{item.russian}</Link></li>)}
                 </ul>
             </div>
         </nav>
