@@ -10,18 +10,21 @@
   font-family: "neonblitz";
   src: url(../public/fonts/Neonblitz.ttf);
 }
+
 @font-face {
   font-family: "mondayVibes";
   src: url(../public/fonts/MondayVibes.ttf);
 }
+
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
@@ -46,7 +49,8 @@ a {
   }
   .searchForm,
   .searchList_block {
-    grid-template-columns: 80% 20%;
+    -ms-grid-columns: 80% 20%;
+        grid-template-columns: 80% 20%;
   }
   .searchForm input {
     height: 10vw;
@@ -77,16 +81,19 @@ a {
   }
   .menu ul {
     position: absolute;
+    z-index: 1;
   }
   .menu li {
     display: block;
     position: relative;
+    background-color: #282c34;
   }
   .desktop_menu {
     display: none;
   }
   .mobile_menu {
     display: block;
+    background-color: #282c34;
   }
   .menuList {
     display: none;
@@ -100,12 +107,19 @@ a {
     font-size: 6vw;
   }
   .list {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     width: 95%;
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
   }
   .productCard {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 30vw;
@@ -123,13 +137,21 @@ a {
   }
   .productNameBlock {
     position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     padding: 1%;
     width: 66%;
   }
   .productName {
     font-size: 6vw;
   }
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */

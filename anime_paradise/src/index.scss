@@ -83,10 +83,12 @@ a {
         font-size: 8vw;
         & ul {
             position: absolute;
+            z-index: 1;
         }
         & li {
             display: block;
             position: relative;
+            background-color: #282c34;
         }
     }
     .desktop_menu {
@@ -94,6 +96,7 @@ a {
     }
     .mobile_menu {
         display: block;
+        background-color: #282c34;
     }
     .menuList {
         display: none;
