@@ -1,21 +1,17 @@
 .menu {
-  position: relative;
   text-align: center;
   font-size: 2.4vw;
   color: white;
 }
-
 .menu ul {
   position: inherit;
   cursor: pointer;
 }
-
 .menu li {
   position: inherit;
   display: inline;
   padding: 0 1.5vw;
 }
-
 .menu li ::before {
   content: "";
   background-color: white;
@@ -23,7 +19,6 @@
   top: 0;
   left: 50%;
 }
-
 .menu li ::after {
   content: "";
   background-color: white;
@@ -31,31 +26,14 @@
   top: 100%;
   left: 50%;
 }
-
 .menu li:hover ::before, .menu li:hover ::after {
-  -webkit-animation: menu_hover;
-          animation: menu_hover;
-  -webkit-animation-duration: 0.35s;
-          animation-duration: 0.35s;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
+  animation: menu_hover;
+  animation-duration: 0.35s;
+  animation-fill-mode: forwards;
 }
 
 .mobile_menu {
   display: none;
-}
-
-@-webkit-keyframes menu_hover {
-  from {
-    height: 0;
-    width: 0;
-    left: 50%;
-  }
-  to {
-    height: 0.25vw;
-    width: 100%;
-    left: 0;
-  }
 }
 
 @keyframes menu_hover {
@@ -69,5 +47,4 @@
     width: 100%;
     left: 0;
   }
-}
-/*# sourceMappingURL=Menu.css.map */
+}/*# sourceMappingURL=Menu.css.map */

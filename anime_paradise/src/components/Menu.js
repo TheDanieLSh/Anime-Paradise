@@ -44,10 +44,27 @@ function Menu() {
         }
     })
 
-    function menuAppear() {
-        const menuList = document.querySelector('.menuList');
-        menuList.style.display = 'block';
-    }
+    const menuToggleArea = document.querySelector('.menuToggleArea');
+    const menu = document.querySelector('.mobile_menu');
+    const menuList = document.querySelector('.menuList');
+    menu && menu.addEventListener('click', () => {
+        if (menuList.classList.contains('menu_opened')) {
+            menuList.classList.remove('menu_opened')
+        } else {
+            menuList.classList.add('menu_opened')
+        }
+    })
+    menuToggleArea.addEventListener('click', () => {
+        menuList.classList.remove('menu_opened')
+    })
+
+    // document.body.addEventListener('click', e => {
+    //     const menu = document.querySelector('.menu');
+    //     const menuList = document.querySelector('.menuList');
+    //     if (e.target.closest(menu)) {
+    //         menuList.style.display = 'block';
+    //     }
+    // });
 
     return (
         <nav className='menu'>
@@ -71,7 +88,7 @@ function Menu() {
                 </ul>
             </div>
             <div className='mobile_menu'>
-                <div className='currentSection' onClick={menuAppear}>{sectionName}</div>
+                <div className='currentSection'>{sectionName}</div>
                 <ul className='menuList'>
                     {currentList.map(item => <li key={item.url}><Link to={'/' + item.url}>{item.russian}</Link></li>)}
                 </ul>

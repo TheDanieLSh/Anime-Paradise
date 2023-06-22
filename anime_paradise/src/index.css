@@ -10,21 +10,18 @@
   font-family: "neonblitz";
   src: url(../public/fonts/Neonblitz.ttf);
 }
-
 @font-face {
   font-family: "mondayVibes";
   src: url(../public/fonts/MondayVibes.ttf);
 }
-
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 body {
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background-color: #282c34;
@@ -49,8 +46,7 @@ a {
   }
   .searchForm,
   .searchList_block {
-    -ms-grid-columns: 80% 20%;
-        grid-template-columns: 80% 20%;
+    grid-template-columns: 80% 20%;
   }
   .searchForm input {
     height: 10vw;
@@ -77,6 +73,7 @@ a {
     font-size: 15vw;
   }
   .menu {
+    position: relative;
     font-size: 8vw;
   }
   .menu ul {
@@ -86,6 +83,7 @@ a {
   .menu li {
     display: block;
     position: relative;
+    margin: 1px 0;
     background-color: #282c34;
   }
   .desktop_menu {
@@ -95,6 +93,11 @@ a {
     display: block;
     background-color: #282c34;
   }
+  .menuToggleArea {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
   .menuList {
     display: none;
     position: absolute;
@@ -103,23 +106,19 @@ a {
     margin-left: auto;
     margin-right: auto;
   }
+  .menu_opened {
+    display: block;
+  }
   .pageContent > p {
     font-size: 6vw;
   }
   .list {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     width: 95%;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
   }
   .productCard {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
     width: 100%;
     height: 30vw;
@@ -137,21 +136,35 @@ a {
   }
   .productNameBlock {
     position: relative;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-direction: column;
+    justify-content: center;
     padding: 1%;
     width: 66%;
   }
   .productName {
     font-size: 6vw;
   }
-}
-/*# sourceMappingURL=index.css.map */
+  .footerInfo {
+    font-size: 4.5vw;
+  }
+  .productPage {
+    flex-direction: column;
+    align-items: center;
+  }
+  .productPage img {
+    width: 75%;
+  }
+  .productInfo {
+    margin: 1vw;
+    bottom: 0;
+  }
+  .nameHeader {
+    font-size: 7vw;
+    text-align: center;
+  }
+  .description {
+    margin-top: 2vw;
+    font-size: 5vw;
+  }
+}/*# sourceMappingURL=index.css.map */

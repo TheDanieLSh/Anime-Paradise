@@ -30,7 +30,7 @@ function App() {
     dispatch(fetchProducts());
   }, [dispatch])
   return (
-    <div>
+    <div className='menuToggleArea'>
       <header>
         <SearchBar />
         <Logo />

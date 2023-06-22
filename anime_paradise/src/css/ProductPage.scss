@@ -2,7 +2,6 @@
     position: relative;
     display: flex;
     flex-direction: row;
-    
     & img {
         position: relative;
         width: 30vw;
@@ -18,10 +17,10 @@
 .nameHeader {
     position: relative;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 2vw;
 }
 .description {
     position: relative;
     margin-top: 1vw;
-    font-size: 20px;
+    font-size: 1.5vw;
 }
