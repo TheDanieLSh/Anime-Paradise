@@ -54,8 +54,10 @@ function Menu() {
             menuList.classList.add('menu_opened')
         }
     })
-    menuToggleArea.addEventListener('click', () => {
-        menuList.classList.remove('menu_opened')
+    menuToggleArea && menuToggleArea.addEventListener('click', () => {
+        if (menuList.classList.contains('menu_opened')) {
+            menuList.classList.remove('menu_opened')
+        }
     })
 
     // document.body.addEventListener('click', e => {
