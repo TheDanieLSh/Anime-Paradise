@@ -29,8 +29,13 @@ function App() {
   useEffect(() => {
     dispatch(fetchProducts());
   }, [dispatch])
+
+  function menuDisappear() {
+    
+  }
+
   return (
-    <div className='menuToggleArea'>
+    <div className='menuToggleArea' onClick={menuDisappear}>
       <header>
         <SearchBar />
         <Logo />

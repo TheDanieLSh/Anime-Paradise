@@ -44,29 +44,38 @@ function Menu() {
         }
     })
 
-    const menuToggleArea = document.querySelector('.menuToggleArea');
-    const menu = document.querySelector('.mobile_menu');
-    const menuList = document.querySelector('.menuList');
-    menu && menu.addEventListener('click', () => {
-        if (menuList.classList.contains('menu_opened')) {
-            menuList.classList.remove('menu_opened')
-        } else {
-            menuList.classList.add('menu_opened')
-        }
-    })
-    menuToggleArea && menuToggleArea.addEventListener('click', () => {
-        if (menuList.classList.contains('menu_opened')) {
-            menuList.classList.remove('menu_opened')
-        }
-    })
+    function menuAppear() {
+        document.querySelector('.menuList').classList.add('menu_opened');
+    }
 
-    // document.body.addEventListener('click', e => {
-    //     const menu = document.querySelector('.menu');
-    //     const menuList = document.querySelector('.menuList');
-    //     if (e.target.closest(menu)) {
-    //         menuList.style.display = 'block';
+    // const menuToggleArea = document.querySelector('.menuToggleArea');
+    // const menu = document.querySelector('.mobile_menu');
+    // const menuList = document.querySelector('.menuList');
+    // menu && menu.addEventListener('click', () => {
+    //     if (menuList.classList.contains('menu_opened')) {
+    //         menuList.classList.remove('menu_opened')
+    //     } else {
+    //         console.log(menuList.classList);
+    //         menuList.classList.add('menu_opened')
     //     }
-    // });
+    // })
+    // menuToggleArea && menuToggleArea.addEventListener('click', () => {
+    //     if (menuList.classList.contains('menu_opened')) {
+    //         menuList.classList.remove('menu_opened')
+    //     }
+    // })
+
+    document.body.addEventListener('click', e => {
+        const menuList = document.querySelector('.menuList');
+        if (e.target.closest('.mobile_menu')) {
+            if (menuList.style.display == '') {
+                menuList.style.display = 'block';
+            } else {
+                menuList.style.display = '';
+            }
+            
+        }
+    });
 
     return (
         <nav className='menu'>
@@ -89,7 +98,7 @@ function Menu() {
                     </li>
                 </ul>
             </div>
-            <div className='mobile_menu'>
+            <div className='mobile_menu' >
                 <div className='currentSection'>{sectionName}</div>
                 <ul className='menuList'>
                     {currentList.map(item => <li key={item.url}><Link to={'/' + item.url}>{item.russian}</Link></li>)}
