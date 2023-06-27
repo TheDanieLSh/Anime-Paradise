@@ -67,13 +67,17 @@ function Menu() {
 
     document.body.addEventListener('click', e => {
         const menuList = document.querySelector('.menuList');
+        const theDisplayProperty = window.getComputedStyle(menuList).getPropertyValue('display');
         if (e.target.closest('.mobile_menu')) {
-            if (menuList.style.display == '') {
+            document.querySelector('.mobile_menu').style.backgroundColor = '#262626';
+            if (theDisplayProperty == 'none') {
                 menuList.style.display = 'block';
-            } else {
-                menuList.style.display = '';
-            }
-            
+            } //else {
+                //menuList.style.display = 'none';
+            //}
+        } else {
+            document.querySelector('.mobile_menu').style.backgroundColor = '#282c34';
+            menuList.style.display = 'none';
         }
     });
 

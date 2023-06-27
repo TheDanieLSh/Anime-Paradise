@@ -83,7 +83,6 @@ a {
   .menu li {
     display: block;
     position: relative;
-    margin: 1px 0;
     background-color: #282c34;
   }
   .desktop_menu {
