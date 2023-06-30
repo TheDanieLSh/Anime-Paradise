@@ -30,12 +30,8 @@ function App() {
     dispatch(fetchProducts());
   }, [dispatch])
 
-  function menuDisappear() {
-    
-  }
-
   return (
-    <div className='menuToggleArea' onClick={menuDisappear}>
+    <div>
       <header>
         <SearchBar />
         <Logo />
