@@ -150,6 +150,10 @@ a {
   .productName {
     font-size: 6vw;
   }
+  .pageLink {
+    font-size: 7vw;
+    margin: auto 1.3vw;
+  }
   .footerInfo {
     font-size: 4.5vw;
   }

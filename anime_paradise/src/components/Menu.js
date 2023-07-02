@@ -44,60 +44,18 @@ function Menu() {
         }
     })
 
-    // const menuToggleArea = document.querySelector('.menuToggleArea');
-    // const menu = document.querySelector('.mobile_menu');
-    // const menuList = document.querySelector('.menuList');
-    // menu && menu.addEventListener('click', () => {
-    //     if (menuList.classList.contains('menu_opened')) {
-    //         menuList.classList.remove('menu_opened')
-    //     } else {
-    //         console.log(menuList.classList);
-    //         menuList.classList.add('menu_opened')
-    //     }
-    // })
-    // menuToggleArea && menuToggleArea.addEventListener('click', () => {
-    //     if (menuList.classList.contains('menu_opened')) {
-    //         menuList.classList.remove('menu_opened')
-    //     }
-    // })
-
-    // document.body.addEventListener('click', e => {
-    //     const mobileMenuTarget = e.target.closest('.mobile_menu.has-open');
-    //     if (mobileMenuTarget && mobileMenuTarget.classList.contains('has-open')) {
-    //         e.stopPropagation();
-    //         console.log('test');
-    //         //e.target.classList.remove('has-open');
-    //     }
-    //     const menuList = document.querySelector('.menuList');
-    //     const theDisplayProperty = window.getComputedStyle(menuList).getPropertyValue('display');
-    //     if (e.target.closest('.mobile_menu')) {
-    //         document.querySelector('.mobile_menu').style.backgroundColor = '#262626';
-    //         if (theDisplayProperty == 'none') {
-    //             menuList.style.display = 'block';
-    //         } else {
-    //             menuList.style.display = 'none';
-    //         }
-    //     } else {
-    //         document.querySelector('.mobile_menu').style.backgroundColor = '#282c34';
-    //         menuList.style.display = 'none';
-    //     }
-    // });
-
-    function menuAppear(e) {
-        const mobileMenu = e.target.closest('.mobile_menu');
-        const menuClassList = Object.values(mobileMenu.classList);
-        const menuToggleArea = document.querySelector('.menuToggleArea');?????
-        if (menuClassList.includes('has-open')) {
-            mobileMenu.classList.remove('has-open');
+    document.body.addEventListener('click', e => {
+        const mobileMenu = document.querySelector('.mobile_menu');
+        if (e.target.closest('.mobile_menu')) {
+            if (mobileMenu.classList.contains('.has-open')) {
+                mobileMenu.classList.remove('has-open')
+            } else {
+                mobileMenu.classList.add('has-open')
+            }
         } else {
-            mobileMenu.classList.add('has-open');
+            mobileMenu.classList.remove('has-open')
         }
-        document.querySelector('.menuToggleArea').classList.add('.has-open');
-    }
-
-    function menuDisappear() {
-        document.querySelector('.mobile_menu').classList.remove('.has-open');????
-    }
+    })
 
     return (
         <nav className='menu'>
@@ -120,10 +78,9 @@ function Menu() {
                     </li>
                 </ul>
             </div>
-            <div className='mobile_menu' onClick={menuAppear}>
+            <div className='mobile_menu'>
                 <div className='currentSection'>
                     {sectionName}
-                    <div className='menuToggleArea' onClick={menuDisappear}></div>
                 </div>
                 <ul className='menuList'>
                     {currentList.map(item => <li key={item.url}><Link to={'/' + item.url}>{item.russian}</Link></li>)}
