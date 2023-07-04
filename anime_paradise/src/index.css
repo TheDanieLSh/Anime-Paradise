@@ -52,6 +52,9 @@ a {
   .searchList_block {
     grid-template-columns: 85% 15%;
   }
+  .searchListItem {
+    width: 85%;
+  }
 }
 @media screen and (max-width: 59rem) {
   .productPage {
@@ -88,7 +91,7 @@ a {
     font-size: 4vw;
   }
   .searchListItem {
-    width: 80vw;
+    width: 80%;
     height: 10vw;
     border-radius: 2.5vw;
     padding-left: 0.8vw;
@@ -113,6 +116,9 @@ a {
     display: block;
     position: relative;
     background-color: #282c34;
+  }
+  .menu li:hover::before, .menu li:hover::after {
+    animation: none;
   }
   .desktop_menu {
     display: none;

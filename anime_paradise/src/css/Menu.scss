@@ -36,10 +36,9 @@
 }
 
 .mobile_menu {
+    position: relative;
+    cursor: pointer;
     display: none;
-    &.has-open {
-        display: block;
-    }
 }
 
 @keyframes menu_hover {

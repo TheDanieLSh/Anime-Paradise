@@ -62,19 +62,19 @@ function Menu() {
             <div className='desktop_menu'>
                 <ul>
                     <li>
-                        <Link to="">Главная</Link>
+                        <Link to="/">Главная</Link>
                     </li>
                     <li>
-                        <Link to="figures/1">Фигурки</Link>
+                        <Link to="/figures/1">Фигурки</Link>
                     </li>
                     <li>
-                        <Link to="dakimakuras/1">Дакимакуры</Link>
+                        <Link to="/dakimakuras/1">Дакимакуры</Link>
                     </li>
                     <li>
-                        <Link to="manga/1">Манга</Link>
+                        <Link to="/manga/1">Манга</Link>
                     </li>
                     <li>
-                        <Link to="other/1">Прочий мерч</Link>
+                        <Link to="/other/1">Прочий мерч</Link>
                     </li>
                 </ul>
             </div>
