@@ -10,8 +10,8 @@
 
 .pageContent > p {
     position: relative;
-    padding: 0 1vw;
+    padding: 0 1.5rem;
     color: white;
-    font-size: 2vw;
+    font-size: 3rem;
     font-weight: bold;
 }

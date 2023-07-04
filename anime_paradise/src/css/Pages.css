@@ -1,10 +1,10 @@
 .pageList {
-    margin-top: 1vw;
+    margin-top: 1.5rem;
 }
 .pageLink {
     display: inline-block;
-    padding: 0 0.7vw;
-    font-size: 1.5vw;
+    padding: 0 1rem;
+    font-size: 2.5rem;
     color: white;
     cursor: pointer;
     text-decoration: none;

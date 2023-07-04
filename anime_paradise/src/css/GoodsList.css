@@ -7,11 +7,11 @@
 
 .productCard {
     border: solid white;
-    border-radius: 1.5vw;
+    border-radius: 2.5rem;
     text-align: center;
-    width: 14vw;
-    height: 17vw;
-    margin: 1vw 2vw;
+    width: 21.5rem;
+    height: 26rem;
+    margin: 1.5rem 3rem;
 } 
 
 .productPicture {
@@ -25,11 +25,11 @@
 .productPicture img {
     width: 100%;
     height: 100%;
-    border-radius: 1.5vw;
+    border-radius: 2.5rem;
 }
 
 .productName {
-    font-size: 1.2vw;
+    font-size: 1.8rem;
     font-weight: bold;
     color: white;
     text-align: center;
