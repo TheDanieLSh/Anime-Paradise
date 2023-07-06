@@ -8,7 +8,7 @@ import './index.css';
 import SearchBar from './components/SearchBar';
 import Logo from './components/Logo';
 import Menu from './components/Menu';
-import Sections from './components/Sections';
+import Section from './components/Section';
 import ProductPage from './components/ProductPage';
 import Bottom from './components/Bottom';
 import reportWebVitals from './reportWebVitals';
@@ -42,7 +42,7 @@ function App() {
       </header>
       <main>
         <Routes>
-          <Route path='*' element={<Sections />} />
+          <Route path='*' element={<Section />} />
           <Route path='/:product_id' element={<ProductPage />} />
         </Routes>
       </main>

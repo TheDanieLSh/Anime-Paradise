@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import GoodsList from './GoodsList';
 import Pages from './Pages';
 
-function Sections() {
+function Section() {
     return (
         <Routes>
             <Route path='' element={<>
@@ -23,4 +23,4 @@ function Sections() {
     )
 }
 
-export default Sections;
+export default Section;
