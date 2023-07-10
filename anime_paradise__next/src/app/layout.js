@@ -1,7 +1,10 @@
-import './globals.css'
-import { Inter } from 'next/font/google'
-
-const inter = Inter({ subsets: ['latin'] })
+import { Provider, useDispatch } from 'react-redux'
+import { store } from './redux/reduxStateStore'
+import './global.css'
+import SearchBar from './components/SearchBar'
+import Logo from './components/Logo'
+import Menu from './components/Menu'
+import Bottom from './components/Bottom'
 
 export const metadata = {
   title: 'Create Next App',
@@ -9,9 +12,28 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
+  // const dispatch = useDispatch();
+  // useEffect(() => {
+  //   dispatch(fetchProducts());
+  // }, [dispatch])
+
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body>
+        {/* <Provider store={store}> */}
+          <header>
+            <SearchBar />
+            <Logo />
+            <Menu />
+          </header>
+          <main>
+            {children}
+          </main>
+          <footer>
+            <Bottom />
+          </footer>
+        {/* </Provider> */}
+      </body>
     </html>
   )
 }
