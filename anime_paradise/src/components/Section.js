@@ -5,7 +5,7 @@ import Pages from './Pages';
 function Section() {
     return (
         <Routes>
-            <Route path='' element={<>
+            <Route path='/' element={<>
                 <div className="pageContent" data-main="true">
                     <p>Новинки</p>
                     <GoodsList goods="novelties" />
@@ -17,6 +17,12 @@ function Section() {
                 <div className='pageContent'>
                     <GoodsList />
                     <Pages />
+                </div>
+            </>} />
+            <Route path='/search/:search_item/:page_number' element={<>
+                <div className='pageContent'>
+                    <GoodsList />
+                    {/* <Pages /> */}
                 </div>
             </>} />
         </Routes>

@@ -35,15 +35,12 @@ function App() {
       <header>
         <SearchBar />
         <Logo />
-        <Routes>
-          <Route path='/:section/*' element={<Menu />} />
-          <Route path='/*' element={<Menu />} />
-        </Routes>
+        <Menu />
       </header>
       <main>
         <Routes>
           <Route path='*' element={<Section />} />
-          <Route path='/:product_id' element={<ProductPage />} />
+          <Route path='/product/:product_id' element={<ProductPage />} />
         </Routes>
       </main>
       <footer>
