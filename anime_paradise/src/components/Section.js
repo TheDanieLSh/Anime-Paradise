@@ -2,7 +2,7 @@ import { Routes, Route } from 'react-router-dom';
 import GoodsList from './GoodsList';
 import Pages from './Pages';
 
-function Section() {
+export default function Section() {
     return (
         <Routes>
             <Route path='/' element={<>
@@ -22,11 +22,9 @@ function Section() {
             <Route path='/search/:search_item/:page_number' element={<>
                 <div className='pageContent'>
                     <GoodsList />
-                    {/* <Pages /> */}
+                    <Pages />
                 </div>
             </>} />
         </Routes>
     )
 }
-
-export default Section;

@@ -1,6 +1,6 @@
 import { Link, useParams } from 'react-router-dom';
 
-function Menu() {
+export default function Menu() {
     const { section } = useParams();
     let sectionName;
     switch (section) {
@@ -89,5 +89,3 @@ function Menu() {
         </nav>
     )
 }
-
-export default Menu;

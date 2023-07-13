@@ -1,7 +1,7 @@
 import { useSelector } from "react-redux";
 import { useParams } from 'react-router-dom';
 
-function ProductPage() {
+export default function ProductPage() {
     const products = useSelector(state => state.fetchDataReducer.products);
     const { product_id } = useParams();
     const currentProduct = products ? returnCurrentProduct() : [];
@@ -24,5 +24,3 @@ function ProductPage() {
         </div>
     )
 }
-
-export default ProductPage;

@@ -6,7 +6,7 @@ let searchItem;
 let foundItems = [];
 let listVisability = false;
 let searchLink = window.location.href;
-function SearchBar() {
+export default function SearchBar() {
     const [inputRerender, doInputRerender] = useState(null);
     const products = useSelector(state => state.fetchDataReducer.products);
     function handleChange(e) {
@@ -49,5 +49,3 @@ function SearchBar() {
         </div>
     )
 }
-
-export default SearchBar;

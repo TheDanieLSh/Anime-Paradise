@@ -1,7 +1,9 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
+import { setValue } from '../redux/searchReducer';
+import { useEffect } from 'react';
 
-function GoodsList(props) {
+export default function GoodsList(props) {
     const params = useParams();
 
     const goods = returnGoods();
@@ -41,6 +43,11 @@ function GoodsList(props) {
         }
     }
 
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(setValue(currentPageProducts));
+    })
+
     return (
         <div className="list">
             {products && currentPageProducts.map((good, i) => (
@@ -56,5 +63,3 @@ function GoodsList(props) {
         </div>
     )
 }
-
-export default GoodsList;
