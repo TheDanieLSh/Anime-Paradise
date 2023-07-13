@@ -12,15 +12,15 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  // const dispatch = useDispatch();
-  // useEffect(() => {
-  //   dispatch(fetchProducts());
-  // }, [dispatch])
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(fetchProducts());
+  }, [dispatch])
 
   return (
-    <html lang="en">
-      <body>
-        {/* <Provider store={store}> */}
+    <Provider store={store}>
+      <html lang="en">
+        <body>
           <header>
             <SearchBar />
             <Logo />
@@ -32,8 +32,8 @@ export default function RootLayout({ children }) {
           <footer>
             <Bottom />
           </footer>
-        {/* </Provider> */}
-      </body>
-    </html>
+        </body>
+      </html>
+    </Provider>
   )
 }

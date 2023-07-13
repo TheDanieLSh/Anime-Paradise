@@ -8,11 +8,11 @@
 @import url(./css/ProductPage.css);
 @font-face {
   font-family: "neonblitz";
-  src: url(../public/fonts/Neonblitz.ttf);
+  src: url(/public/fonts/Neonblitz.ttf);
 }
 @font-face {
   font-family: "mondayVibes";
-  src: url(../public/fonts/MondayVibes.ttf);
+  src: url(/public/fonts/MondayVibes.ttf);
 }
 * {
   margin: 0;
