@@ -35,7 +35,11 @@ function App() {
       <header>
         <SearchBar />
         <Logo />
-        <Menu />
+        <Routes>
+          <Route path='/:section/*' element={<Menu />} />
+          <Route path='/search/*' element={<Menu />} />
+          <Route path='/*' element={<Menu />} />
+        </Routes>
       </header>
       <main>
         <Routes>

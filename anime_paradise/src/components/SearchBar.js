@@ -6,12 +6,13 @@ let searchItem;
 let foundItems = [];
 let listVisability = false;
 let searchLink = window.location.href;
+
 export default function SearchBar() {
     const [inputRerender, doInputRerender] = useState(null);
     const products = useSelector(state => state.fetchDataReducer.products);
     function handleChange(e) {
         searchItem = e.target.value.toLowerCase();
-        searchLink = searchItem.split(' ').join('_'); 
+        searchLink = searchItem.split(' ').join('_');
         foundItems = [];
         for (let key of Object.keys(products)) {
             products[key].forEach(good => {
@@ -36,15 +37,21 @@ export default function SearchBar() {
             <div className="searchBar">
                 <form className="searchForm">
                     <input type="text" onChange={handleChange} />
-                    <Link to={'/' + 'search' + '/' + searchLink + '/' + '1'}><button type="submit">Поиск</button></Link>
-                </form>
-                <div className="searchList_block">
-                    <div className="searchList">
-                        {listVisability === true && foundItems.map((item, i) => (
-                            <Link to={"/" + "product" + "/" + item.id} key={i}><div className="searchListItemBlock"><div className="searchListItem">{item.name}</div></div></Link>
-                        ))}
+                    <Link to={'/' + 'search' + '/' + searchLink + '/' + '1'}>
+                        <button type="submit">Поиск</button>
+                    </Link>
+                    <div className="searchList_block">
+                        <div className="searchList">
+                            {listVisability === true && foundItems.map((item, i) => (
+                                <Link to={"/" + "product" + "/" + item.id} key={i}>
+                                    <div className="searchListItemBlock">
+                                        <div className="searchListItem">{item.name}</div>
+                                    </div>
+                                </Link>
+                            ))}
+                        </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     )
