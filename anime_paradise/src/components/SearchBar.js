@@ -36,22 +36,22 @@ export default function SearchBar() {
         <div className="searchBar_block">
             <div className="searchBar">
                 <form className="searchForm">
-                    <input type="text" onChange={handleChange} />
+                    <input type="text" onChange={handleChange} className="theInputField" />
                     <Link to={'/' + 'search' + '/' + searchLink + '/' + '1'}>
                         <button type="submit">Поиск</button>
                     </Link>
-                    <div className="searchList_block">
-                        <div className="searchList">
-                            {listVisability === true && foundItems.map((item, i) => (
-                                <Link to={"/" + "product" + "/" + item.id} key={i}>
-                                    <div className="searchListItemBlock">
-                                        <div className="searchListItem">{item.name}</div>
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
                 </form>
+                <div className="searchList_block">
+                    <div className="searchList">
+                        {listVisability === true && foundItems.map((item, i) => (
+                            <Link to={"/" + "product" + "/" + item.id} key={i}>
+                                <div className="searchListItemBlock">
+                                    <div className="searchListItem">{item.name}</div>
+                                </div>
+                            </Link>
+                        ))}
+                    </div>
+                </div>
             </div>
         </div>
     )

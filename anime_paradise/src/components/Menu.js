@@ -55,6 +55,19 @@ export default function Menu() {
         } else {
             mobileMenu.classList.remove('has-open')
         }
+
+        //СКРЫТИЕ НАЙДЕННЫХ ТОВАРОВ ПОД СЁРЧБАРОМ
+        const searchList = document.querySelector('.searchList');
+        if (!e.target.closest('.theInputField')) {
+            if (searchList.classList.contains('searchList_appearance')) {
+                searchList.classList.remove('searchList_appearance')
+            }
+        } 
+        if (e.target.closest('.theInputField')) {
+            if (!searchList.classList.contains('searchList_appearance')) {
+                searchList.classList.add('searchList_appearance')
+            }
+        }
     })
 
     return (
