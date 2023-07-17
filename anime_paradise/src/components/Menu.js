@@ -47,7 +47,7 @@ export default function Menu() {
     document.body.addEventListener('click', e => {
         const mobileMenu = document.querySelector('.mobile_menu');
         if (e.target.closest('.mobile_menu')) {
-            if (mobileMenu.classList.contains('.has-open')) {
+            if (mobileMenu.classList.contains('has-open')) {
                 mobileMenu.classList.remove('has-open')
             } else {
                 mobileMenu.classList.add('has-open')
