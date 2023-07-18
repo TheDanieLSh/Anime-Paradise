@@ -129,6 +129,10 @@ a {
   .mobile_menu.has-open {
     background-color: #262626;
   }
+  .mobile_menu.has-open .currentSection {
+    border-top: none;
+    border-bottom: none;
+  }
   .mobile_menu.has-open .menuList {
     display: block;
   }

@@ -39,6 +39,15 @@
   display: none;
 }
 
+.currentSection {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  width: 40vw;
+  border-top: 0.75vw solid white;
+  border-bottom: 0.75vw solid white;
+}
+
 @keyframes menu_hover {
   from {
     height: 0;

@@ -47,9 +47,7 @@ export default function Menu() {
     document.body.addEventListener('click', e => {
         const mobileMenu = document.querySelector('.mobile_menu');
         if (e.target.closest('.mobile_menu')) {
-            if (mobileMenu.classList.contains('has-open')) {
-                mobileMenu.classList.remove('has-open')
-            } else {
+            if (!mobileMenu.classList.contains('has-open')) {
                 mobileMenu.classList.add('has-open')
             }
         } else {
@@ -62,7 +60,7 @@ export default function Menu() {
             if (searchList.classList.contains('searchList_appearance')) {
                 searchList.classList.remove('searchList_appearance')
             }
-        } 
+        }
         if (e.target.closest('.theInputField')) {
             if (!searchList.classList.contains('searchList_appearance')) {
                 searchList.classList.add('searchList_appearance')
@@ -92,9 +90,7 @@ export default function Menu() {
                 </ul>
             </div>
             <div className='mobile_menu'>
-                <div className='currentSection'>
-                    {sectionName}
-                </div>
+                <div className='currentSection'>{sectionName}</div>
                 <ul className='menuList'>
                     {currentList.map(item => <li key={item.url}><Link to={'/' + item.url}>{item.russian}</Link></li>)}
                 </ul>

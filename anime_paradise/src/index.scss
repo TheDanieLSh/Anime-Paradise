@@ -139,6 +139,10 @@ a {
         display: block;
         &.has-open {
             background-color: #262626;
+            .currentSection {
+                border-top: none;
+                border-bottom: none;
+            }
             .menuList {
                 display: block;
             }
