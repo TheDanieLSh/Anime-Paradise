@@ -1,3 +1,4 @@
+'use client'
 import { Provider, useDispatch } from 'react-redux'
 import { store } from './redux/reduxStateStore'
 import './globals.css'

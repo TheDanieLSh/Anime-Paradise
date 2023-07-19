@@ -1,7 +1,7 @@
 'use client'
 import { useSelector } from "react-redux";
 import { useState } from "react";
-import { Link } from "react-router-dom";
+import { Link } from "next/link";
 
 let searchItem;
 let foundItems = [];
