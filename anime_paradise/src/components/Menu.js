@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import { Link, useParams } from 'react-router-dom';
 
 export default function Menu() {
@@ -44,29 +45,29 @@ export default function Menu() {
         }
     })
 
-    document.body.addEventListener('click', e => {
-        const mobileMenu = document.querySelector('.mobile_menu');
-        if (e.target.closest('.mobile_menu')) {
-            if (!mobileMenu.classList.contains('has-open')) {
-                mobileMenu.classList.add('has-open')
+    useEffect(() => {
+        document.body.addEventListener('click', e => {
+            const mobileMenu = document.querySelector('.mobile_menu');
+            if (e.target.closest('.mobile_menu')) {
+                mobileMenu.classList.toggle('has-open');
+                console.log('pizda');
+            } else {
+                mobileMenu.classList.remove('has-open')
             }
-        } else {
-            mobileMenu.classList.remove('has-open')
-        }
-
-        //СКРЫТИЕ НАЙДЕННЫХ ТОВАРОВ ПОД СЁРЧБАРОМ
-        const searchList = document.querySelector('.searchList');
-        if (!e.target.closest('.theInputField')) {
-            if (searchList.classList.contains('searchList_appearance')) {
-                searchList.classList.remove('searchList_appearance')
+    
+            //СКРЫТИЕ НАЙДЕННЫХ ТОВАРОВ ПОД СЁРЧБАРОМ
+            const searchList = document.querySelector('.searchList');
+            if (e.target.closest('.theInputField')) {
+                if (!searchList.classList.contains('searchList_appearance')) {
+                    searchList.classList.add('searchList_appearance')
+                }
+            } else {
+                if (searchList.classList.contains('searchList_appearance')) {
+                    searchList.classList.remove('searchList_appearance')
+                }
             }
-        }
-        if (e.target.closest('.theInputField')) {
-            if (!searchList.classList.contains('searchList_appearance')) {
-                searchList.classList.add('searchList_appearance')
-            }
-        }
-    })
+        })
+    }, [])
 
     return (
         <nav className='menu'>
