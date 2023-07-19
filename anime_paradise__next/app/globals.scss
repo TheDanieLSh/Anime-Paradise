@@ -79,7 +79,7 @@ a {
 
 @media screen and (max-width: 500px) {
     .searchBar {
-        width: 100%;
+        width: 97%;
     }
     .searchForm,
     .searchList_block {
@@ -139,6 +139,10 @@ a {
         display: block;
         &.has-open {
             background-color: #262626;
+            .currentSection {
+                border-top: none;
+                border-bottom: none;
+            }
             .menuList {
                 display: block;
             }

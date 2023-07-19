@@ -2,10 +2,10 @@ import { Routes, Route } from 'react-router-dom';
 import GoodsList from './GoodsList';
 import Pages from './Pages';
 
-function Section() {
+export default function Section() {
     return (
         <Routes>
-            <Route path='' element={<>
+            <Route path='/' element={<>
                 <div className="pageContent" data-main="true">
                     <p>Новинки</p>
                     <GoodsList goods="novelties" />
@@ -19,8 +19,12 @@ function Section() {
                     <Pages />
                 </div>
             </>} />
+            <Route path='/search/:search_item/:page_number' element={<>
+                <div className='pageContent'>
+                    <GoodsList />
+                    <Pages />
+                </div>
+            </>} />
         </Routes>
     )
 }
-
-export default Section;

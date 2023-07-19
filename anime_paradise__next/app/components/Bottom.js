@@ -1,4 +1,4 @@
-function Bottom() {
+export default function Bottom() {
     return (
         <div className="bottom">
             <div className="theLine"></div>
@@ -10,5 +10,3 @@ function Bottom() {
         </div>
     )
 }
-
-export default Bottom;

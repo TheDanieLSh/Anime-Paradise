@@ -1,6 +1,6 @@
 import { Provider, useDispatch } from 'react-redux'
 import { store } from './redux/reduxStateStore'
-import './global.css'
+import './globals.css'
 import SearchBar from './components/SearchBar'
 import Logo from './components/Logo'
 import Menu from './components/Menu'

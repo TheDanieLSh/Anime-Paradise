@@ -40,6 +40,15 @@
     cursor: pointer;
     display: none;
 }
+.currentSection {
+    position: relative;
+    display: inline;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0 5vw;
+    border-top: 0.8vw solid white;
+    border-bottom: 0.8vw solid white;
+}
 
 @keyframes menu_hover {
     from {
