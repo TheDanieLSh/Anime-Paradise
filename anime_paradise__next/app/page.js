@@ -1,4 +1,4 @@
-export default function App() {
+export default function() {
     return (
         <div className="pageContent" data-main="true">
             <p>Новинки</p>

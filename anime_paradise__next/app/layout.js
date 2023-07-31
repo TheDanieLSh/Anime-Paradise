@@ -1,11 +1,11 @@
-'use client'
-import { Provider, useDispatch } from 'react-redux'
+import { Provider } from 'react-redux'
 import { store } from './redux/reduxStateStore'
 import './globals.css'
 import SearchBar from './components/SearchBar'
 import Logo from './components/Logo'
 import Menu from './components/Menu'
 import Bottom from './components/Bottom'
+import reduxProvider from './redux/reduxProvider'
 
 export const metadata = {
   title: 'Create Next App',
@@ -13,28 +13,25 @@ export const metadata = {
 }
 
 export default function RootLayout({ children }) {
-  const dispatch = useDispatch();
-  useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch])
-
   return (
-    <Provider store={store}>
-      <html lang="en">
-        <body>
-          <header>
+    <html lang="en">
+      <body>
+        <header>
+          <reduxProvider store={store}>
             <SearchBar />
-            <Logo />
-            <Menu />
-          </header>
-          <main>
+          </reduxProvider>
+          <Logo />
+          <Menu />
+        </header>
+        <main>
+          <reduxProvider store={store}>
             {children}
-          </main>
-          <footer>
-            <Bottom />
-          </footer>
-        </body>
-      </html>
-    </Provider>
+          </reduxProvider>
+        </main>
+        <footer>
+          <Bottom />
+        </footer>
+      </body>
+    </html>
   )
 }
