@@ -1,20 +1,28 @@
 'use client'
-import { useSelector } from "react-redux";
-import { useState } from "react";
-import { Link } from 'next/link'
+import { useDispatch, useSelector } from "react-redux";
+import { useEffect, useState } from "react";
+import { Link } from "next/link";
 
 let searchItem;
 let foundItems = [];
 let listVisability = false;
-function SearchBar() {
+let searchLink = window.location.href;
+
+export default function SearchBar() {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        dispatch(fetchProducts());
+    }, [dispatch])
+
     const [inputRerender, doInputRerender] = useState(null);
     const products = useSelector(state => state.fetchDataReducer.products);
     function handleChange(e) {
         searchItem = e.target.value.toLowerCase();
+        searchLink = searchItem.split(' ').join('_');
         foundItems = [];
         for (let key of Object.keys(products)) {
             products[key].forEach(good => {
-                if (good.name.toLowerCase().includes(searchItem) && searchItem !== "") {
+                if ((good.name.toLowerCase().includes(searchItem)) && (searchItem !== "") && (key != 'novelties') && (key != 'hot')) {
                     foundItems.push(good);
                 }
             })
@@ -28,20 +36,25 @@ function SearchBar() {
             searchList.classList.remove('searchList_appearance');
         }
         doInputRerender(searchItem);
-        console.log(foundItems);
     }
-    
+
     return (
         <div className="searchBar_block">
             <div className="searchBar">
                 <form className="searchForm">
-                    <input type="text" onChange={handleChange} />
-                    <button type="submit">Поиск</button>
+                    <input type="text" onChange={handleChange} className="theInputField" />
+                    <Link to={'/' + 'search' + '/' + searchLink + '/' + '1'}>
+                        <button type="submit">Поиск</button>
+                    </Link>
                 </form>
                 <div className="searchList_block">
                     <div className="searchList">
                         {listVisability === true && foundItems.map((item, i) => (
-                            <Link href={"/" + item.id}><div className="searchListItemBlock"><div className="searchListItem" key={i}>{item.name}</div></div></Link>
+                            <Link to={"/" + "product" + "/" + item.id} key={i}>
+                                <div className="searchListItemBlock">
+                                    <div className="searchListItem">{item.name}</div>
+                                </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -49,5 +62,3 @@ function SearchBar() {
         </div>
     )
 }
-
-export default SearchBar;

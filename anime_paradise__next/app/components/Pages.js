@@ -1,13 +1,21 @@
+'use client'
 import { useSelector } from "react-redux";
 import { Link, useParams } from 'react-router-dom';
 
-function Pages() {
+export default function Pages() {
     const params = useParams();
     const products = useSelector(state => state.fetchDataReducer.products);
-    const currentProduct = products ? products[params.section] : [];
+    let currentProduct = [];
     const pageLinks = [];
+    const searchedProducts = useSelector(state => state.searchReducer.foundItems);
 
-    let numberOfPages = () => {
+    if (!document.location.pathname.includes('/search/')) {
+        currentProduct = products ? products[params.section] : [];
+    } else {
+        currentProduct = searchedProducts;
+    }
+
+    const numberOfPages = () => {
         if ((currentProduct.length / 8) % 1 == 0) {
             return currentProduct.length / 8
         }
@@ -24,4 +32,3 @@ function Pages() {
         </div>
     )
 }
- export default Pages;

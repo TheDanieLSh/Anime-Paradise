@@ -8,11 +8,11 @@
 @import url(./css/ProductPage.css);
 @font-face {
   font-family: "neonblitz";
-  src: url(/public/fonts/Neonblitz.ttf);
+  src: url(../public/fonts/Neonblitz.ttf);
 }
 @font-face {
   font-family: "mondayVibes";
-  src: url(/public/fonts/MondayVibes.ttf);
+  src: url(../public/fonts/MondayVibes.ttf);
 }
 * {
   margin: 0;
@@ -73,7 +73,7 @@ a {
 }
 @media screen and (max-width: 500px) {
   .searchBar {
-    width: 100%;
+    width: 97%;
   }
   .searchForm,
   .searchList_block {
@@ -128,6 +128,10 @@ a {
   }
   .mobile_menu.has-open {
     background-color: #262626;
+  }
+  .mobile_menu.has-open .currentSection {
+    border-top: none;
+    border-bottom: none;
   }
   .mobile_menu.has-open .menuList {
     display: block;
@@ -204,4 +208,4 @@ a {
     margin-top: 2vw;
     font-size: 5vw;
   }
-}/*# sourceMappingURL=global.css.map */
+}/*# sourceMappingURL=globals.css.map */

@@ -1,5 +1,7 @@
+//ПОФИКСИТЬ
+'use client'
 import { useEffect } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link } from 'next/link';
 
 export default function Menu() {
     const { section } = useParams();
