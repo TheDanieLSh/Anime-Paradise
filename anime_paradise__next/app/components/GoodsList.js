@@ -1,4 +1,3 @@
-'use client'
 import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
 import { setValue } from '../redux/searchReducer';
