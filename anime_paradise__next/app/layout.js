@@ -19,7 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en">
       <body>
         <header>
-            <SearchBar />
+          <SearchBar />
           <Logo />
           <Menu />
         </header>
