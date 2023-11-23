@@ -1,3 +1,5 @@
+import GoodsList from "./components/GoodsList"
+
 export default function() {
     return (
         <div className="pageContent" data-main="true">

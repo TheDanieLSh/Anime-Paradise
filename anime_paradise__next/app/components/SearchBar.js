@@ -6,7 +6,7 @@ import { Link } from "next/link";
 let searchItem;
 let foundItems = [];
 let listVisability = false;
-let searchLink = window.location.href;
+let searchLink;
 
 export default function SearchBar() {
     const dispatch = useDispatch();
