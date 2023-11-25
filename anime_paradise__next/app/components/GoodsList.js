@@ -55,7 +55,7 @@ export default function GoodsList(props, { params }) {
                         <Link to={"/" + "product" + "/" + good.id}><img src={good.pic} alt="ОШИБКА" /></Link>
                     </div>
                     <div className="productNameBlock">
-                        <Link to={"/" + "product" + "/" + good.id}><p className="productName">{good.name}</p></Link>
+                        <Link to={"/" + "product" + "/" + good.id}><h3 className="productName">{good.name}</h3></Link>
                     </div>
                 </div>
             ))}
