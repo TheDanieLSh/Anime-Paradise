@@ -50,7 +50,6 @@ export default function Menu() {
             const mobileMenu = document.querySelector('.mobile_menu');
             if (e.target.closest('.mobile_menu')) {
                 mobileMenu.classList.toggle('has-open');
-                console.log('pizda');
             } else {
                 mobileMenu.classList.remove('has-open')
             }
@@ -74,19 +73,19 @@ export default function Menu() {
             <div className='desktop_menu'>
                 <ul>
                     <li>
-                        <Link to="/">Главная</Link>
+                        <Link to="/">ГЛАВНАЯ</Link>
                     </li>
                     <li>
-                        <Link to="/figures/1">Фигурки</Link>
+                        <Link to="/figures/1">ФИГУРКИ</Link>
                     </li>
                     <li>
-                        <Link to="/dakimakuras/1">Дакимакуры</Link>
+                        <Link to="/dakimakuras/1">ДАКИМАКУРЫ</Link>
                     </li>
                     <li>
-                        <Link to="/manga/1">Манга</Link>
+                        <Link to="/manga/1">МАНГА</Link>
                     </li>
                     <li>
-                        <Link to="/other/1">Прочий мерч</Link>
+                        <Link to="/other/1">ПРОЧИЙ МЕРЧ</Link>
                     </li>
                 </ul>
             </div>

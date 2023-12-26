@@ -30,7 +30,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #282c34;
+  background-color: #212327;
 }
 
 main {
@@ -121,7 +121,7 @@ a {
   .menu li {
     display: block;
     position: relative;
-    background-color: #282c34;
+    background-color: #212327;
   }
   .menu li:hover::before, .menu li:hover::after {
     animation: none;
@@ -133,7 +133,7 @@ a {
     display: block;
   }
   .mobile_menu.has-open {
-    background-color: #262626;
+    background-color: #282c34;
   }
   .mobile_menu.has-open .currentSection {
     border-top: none;

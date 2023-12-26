@@ -24,7 +24,7 @@ body {
         "Droid Sans", "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    background-color: #282c34;
+    background-color: #212327;
 }
 
 main {
@@ -130,7 +130,7 @@ a {
         & li {
             display: block;
             position: relative;
-            background-color: #282c34;
+            background-color: #212327;
             &:hover {
                 &::before, &::after {
                     animation: none;
@@ -144,7 +144,7 @@ a {
     .mobile_menu {
         display: block;
         &.has-open {
-            background-color: #262626;
+            background-color: #282c34;
             .currentSection {
                 border-top: none;
                 border-bottom: none;
