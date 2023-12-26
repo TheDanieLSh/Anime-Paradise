@@ -1,7 +1,7 @@
-import { useSelector, useDispatch } from 'react-redux';
 import { useParams, Link } from 'react-router-dom';
-import { setValue } from '../redux/searchReducer';
 import { useEffect } from 'react';
+import { observer } from 'mobx-react-lite';
+import searchState from '../mobx/searchState';
 
 export default function GoodsList(props) {
     const params = useParams();
@@ -16,7 +16,7 @@ export default function GoodsList(props) {
         return params.section
     }
 
-    const products = useSelector(state => state.fetchDataReducer.products);
+    const products = searchState.foundItems;
 
     const firstProduct = (params.page_number - 1) * 8;
     const lastProduct = firstProduct + 8;
@@ -43,9 +43,8 @@ export default function GoodsList(props) {
         }
     }
 
-    const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(setValue(currentPageProducts));
+        setValue(currentPageProducts);
     })
 
     return (
