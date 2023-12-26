@@ -1,12 +1,15 @@
-import { useSelector } from "react-redux";
+import { observer } from 'mobx-react-lite';
 import { Link, useParams } from 'react-router-dom';
+import fetchDataState from '../mobx/fetchDataState';
+import searchState from '../mobx/searchState';
 
-export default function Pages() {
+
+const Pages = observer(() => {
     const params = useParams();
-    const products = useSelector(state => state.fetchDataReducer.products);
+    const products = fetchDataState.products;
     let currentProduct = [];
     const pageLinks = [];
-    const searchedProducts = useSelector(state => state.searchReducer.foundItems);
+    const searchedProducts = searchState.foundItems;
 
     if (!document.location.pathname.includes('/search/')) {
         currentProduct = products ? products[params.section] : [];
@@ -30,4 +33,6 @@ export default function Pages() {
             {pageLinks}
         </div>
     )
-}
+})
+
+export default Pages

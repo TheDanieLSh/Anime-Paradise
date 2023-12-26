@@ -14,4 +14,4 @@ class fetchDataState {
     }
 }
 
-export default fetchDataState
+export default new fetchDataState

@@ -1,8 +1,8 @@
-import { useSelector } from "react-redux";
+import fetchDataState from '../mobx/fetchDataState';
 import { useParams } from 'react-router-dom';
 
 export default function ProductPage() {
-    const products = useSelector(state => state.fetchDataReducer.products);
+    const products = fetchDataState.products;
     const { product_id } = useParams();
     const currentProduct = products ? returnCurrentProduct() : [];
     function returnCurrentProduct() {

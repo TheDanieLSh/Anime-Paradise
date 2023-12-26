@@ -12,4 +12,4 @@ class searchState {
     }
 }
 
-export default new searchState()
+export default new searchState
