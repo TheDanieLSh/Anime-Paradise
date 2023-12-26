@@ -1,15 +1,16 @@
-import { useSelector } from "react-redux";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import fetchDataState from "../mobx/fetchDataState";
+import { observer } from "mobx-react-lite";
 
 let searchItem;
 let foundItems = [];
 let listVisability = false;
 let searchLink;
 
-export default function SearchBar() {
+const SearchBar = observer(() => {
     const [inputRerender, doInputRerender] = useState(null);
-    const products = useSelector(state => state.fetchDataReducer.products);
+    const products = fetchDataState.products;
     function handleChange(e) {
         searchItem = e.target.value.toLowerCase();
         searchLink = searchItem.split(' ').join('_');
@@ -55,4 +56,6 @@ export default function SearchBar() {
             </div>
         </div>
     )
-}
+})
+
+export default SearchBar

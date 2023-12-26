@@ -1,9 +1,10 @@
 import { useParams, Link } from 'react-router-dom';
 import { useEffect } from 'react';
 import { observer } from 'mobx-react-lite';
+import fetchDataState from "../mobx/fetchDataState";
 import searchState from '../mobx/searchState';
 
-export default function GoodsList(props) {
+const GoodsList = observer((props) => {
     const params = useParams();
 
     const goods = returnGoods();
@@ -16,7 +17,7 @@ export default function GoodsList(props) {
         return params.section
     }
 
-    const products = searchState.foundItems;
+    const products = fetchDataState.products;
 
     const firstProduct = (params.page_number - 1) * 8;
     const lastProduct = firstProduct + 8;
@@ -44,7 +45,7 @@ export default function GoodsList(props) {
     }
 
     useEffect(() => {
-        setValue(currentPageProducts);
+        searchState.setValue(currentPageProducts);
     })
 
     return (
@@ -61,4 +62,6 @@ export default function GoodsList(props) {
             ))}
         </div>
     )
-}
+})
+
+export default GoodsList

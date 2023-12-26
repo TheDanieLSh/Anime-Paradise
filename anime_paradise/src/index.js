@@ -1,9 +1,8 @@
 import React, { useEffect } from 'react';
 import ReactDOM from 'react-dom/client';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { Provider, useDispatch } from 'react-redux';
-import { fetchProducts } from './redux/fetchDataReducer';
-import { store } from './redux/reduxStateStore';
+import { observer } from 'mobx-react-lite';
+import fetchDataState from "./mobx/fetchDataState";
 import './index.css';
 import SearchBar from './components/SearchBar';
 import Logo from './components/Logo';
@@ -13,20 +12,10 @@ import ProductPage from './components/ProductPage';
 import Bottom from './components/Bottom';
 import reportWebVitals from './reportWebVitals';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-    <Router>
-      <Provider store={store}>
-        <App />
-      </Provider>
-    </Router>
-);
-
-function App() {
-  const dispatch = useDispatch();
+const App = observer(() => {
   useEffect(() => {
-    dispatch(fetchProducts());
-  }, [dispatch])
+    fetchDataState.fetchProducts();
+  }, [fetchDataState])
 
   return (
     <div>
@@ -50,6 +39,13 @@ function App() {
       </footer>
     </div>
   )
-}
+})
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(
+    <Router>
+        <App />
+    </Router>
+);
 
 reportWebVitals();
