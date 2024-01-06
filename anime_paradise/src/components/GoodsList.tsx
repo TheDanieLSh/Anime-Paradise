@@ -7,8 +7,8 @@ import searchState from '../mobx/searchState';
 const GoodsList = observer((props) => {
     const params = useParams();
 
-    const goods = returnGoods();
-    function returnGoods() {
+    const goods: string | undefined = returnGoods();
+    function returnGoods(): string | undefined {
         if (document.location.pathname == "/") {
             return props.goods
         } else if (document.location.pathname.includes('/search/')) {
@@ -17,11 +17,11 @@ const GoodsList = observer((props) => {
         return params.section
     }
 
-    const products = fetchDataState.products;
+    const products: object | null = fetchDataState.products;
 
-    const firstProduct = (params.page_number - 1) * 8;
-    const lastProduct = firstProduct + 8;
-    let currentPageProducts = [];
+    const firstProduct: number = (params.page_number - 1) * 8;
+    const lastProduct: number = firstProduct + 8;
+    let currentPageProducts: object[];
 
     if (goods != 'search') {
         if (products) {
