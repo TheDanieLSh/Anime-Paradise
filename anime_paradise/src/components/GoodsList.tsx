@@ -4,8 +4,17 @@ import { observer } from 'mobx-react-lite';
 import fetchDataState from "../mobx/fetchDataState";
 import searchState from '../mobx/searchState';
 
-const GoodsList = observer((props) => {
-    const params = useParams();
+interface GLprops {
+    goods?: string
+}
+interface Params {
+    section?: string,
+    search_item?: string,
+    page_number?: number,
+}
+
+const GoodsList = observer((props: GLprops) => {
+    const params: Params = useParams();
 
     const goods: string | undefined = returnGoods();
     function returnGoods(): string | undefined {
