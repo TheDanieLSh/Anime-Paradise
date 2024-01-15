@@ -12,6 +12,11 @@ interface Params {
     search_item?: string,
     page_number?: string,
 }
+interface Product {
+    name: string,
+    pic: string,
+    id: string,
+}
 
 const GoodsList = observer((props: GLprops) => {
     const params: Params = useParams();
@@ -30,14 +35,14 @@ const GoodsList = observer((props: GLprops) => {
 
     const firstProduct: number = (Number(params.page_number) - 1) * 8;
     const lastProduct: number = firstProduct + 8;
-    let currentPageProducts: object[];
+    let currentPageProducts: Product[];
 
     if (goods != 'search') {
         if (products) {
             if (products[goods].length > 8) {
                 currentPageProducts = products[goods].slice(firstProduct, lastProduct);
             } else {
-                currentPageProducts = products[goods];
+                currentPageProducts = products[goods]; //мэйби удали
             }
         }
     } else {
