@@ -10,7 +10,7 @@ interface GLprops {
 interface Params {
     section?: string,
     search_item?: string,
-    page_number?: number,
+    page_number?: string,
 }
 
 const GoodsList = observer((props: GLprops) => {
@@ -28,7 +28,7 @@ const GoodsList = observer((props: GLprops) => {
 
     const products: object | null = fetchDataState.products;
 
-    const firstProduct: number = (params.page_number - 1) * 8;
+    const firstProduct: number = (Number(params.page_number) - 1) * 8;
     const lastProduct: number = firstProduct + 8;
     let currentPageProducts: object[];
 
