@@ -6,7 +6,6 @@ import SearchBar from './components/SearchBar'
 import Logo from './components/Logo'
 import Menu from './components/Menu'
 import Bottom from './components/Bottom'
-import reduxProvider from './redux/reduxProvider'
 
 export const metadata = {
   title: 'Anime Paradise',

@@ -2,6 +2,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
 import Link from "next/link";
+import { fetchProducts } from "../redux/fetchDataReducer";
 
 let searchItem;
 let foundItems = [];
