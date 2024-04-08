@@ -1,6 +1,6 @@
 'use client'
 import { useSelector, useDispatch } from 'react-redux';
-import { Link } from 'next/link';
+import Link from 'next/link';
 import { useParams } from 'next/navigation'
 import { setValue } from '../redux/searchReducer';
 import { useEffect } from 'react';
