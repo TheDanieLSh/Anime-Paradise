@@ -1,8 +1,10 @@
 'use client'
 import { useSelector } from "react-redux";
 import Link from 'next/link'
+import { useRouter } from "next/navigation";
 
-export default function Pages({ params }) {
+export default function Pages() {
+    const { params } = useRouter();
     const products = useSelector(state => state.fetchDataReducer.products);
     let currentProduct = [];
     const pageLinks = [];

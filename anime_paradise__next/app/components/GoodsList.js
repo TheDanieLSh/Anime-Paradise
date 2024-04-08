@@ -1,10 +1,12 @@
 'use client'
 import { useSelector, useDispatch } from 'react-redux';
 import { Link } from 'next/link';
+import { useRouter } from 'next/navigation'
 import { setValue } from '../redux/searchReducer';
 import { useEffect } from 'react';
 
-export default function GoodsList(props, { params }) {
+export default function GoodsList(props) {
+    const { params } = useRouter();
     const goods = returnGoods();
     function returnGoods() {
         if (document.location.pathname == "/") {
