@@ -2,12 +2,10 @@
 'use client'
 import { useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/navigation';
+import { useParams } from 'next/navigation';
 
 export default function Menu() {
-    const { params } = useRouter();
-    console.log(params);
-    const { section } = params.section;
+    const { section } = useParams();
     let sectionName;
     switch (section) {
         case 'figures':
