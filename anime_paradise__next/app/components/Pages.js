@@ -1,9 +1,8 @@
 'use client'
 import { useSelector } from "react-redux";
-import { Link, useParams } from 'react-router-dom';
+import Link from 'next/link'
 
-export default function Pages() {
-    const params = useParams();
+export default function Pages({ params }) {
     const products = useSelector(state => state.fetchDataReducer.products);
     let currentProduct = [];
     const pageLinks = [];
@@ -23,7 +22,7 @@ export default function Pages() {
     }
 
     for (let x = 1; x < (numberOfPages() + 1); x++) {
-        pageLinks.push(<Link to={`/${params.section}/${x}`} className="pageLink" key={x}>{x}</Link>);
+        pageLinks.push(<Link href={`/${params.section}/${x}`} className="pageLink" key={x}>{x}</Link>);
     }
     
     return (

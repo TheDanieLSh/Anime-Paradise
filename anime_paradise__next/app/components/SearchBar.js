@@ -1,7 +1,7 @@
 'use client'
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect, useState } from "react";
-import { Link } from "next/link";
+import Link from "next/link";
 
 let searchItem;
 let foundItems = [];
@@ -43,14 +43,14 @@ export default function SearchBar() {
             <div className="searchBar">
                 <form className="searchForm">
                     <input type="text" onChange={handleChange} className="theInputField" />
-                    <Link to={'/' + 'search' + '/' + searchLink + '/' + '1'}>
+                    <Link href={'/' + 'search' + '/' + searchLink + '/' + '1'}>
                         <button type="submit">Поиск</button>
                     </Link>
                 </form>
                 <div className="searchList_block">
                     <div className="searchList">
                         {listVisability === true && foundItems.map((item, i) => (
-                            <Link to={"/" + "product" + "/" + item.id} key={i}>
+                            <Link href={"/" + "product" + "/" + item.id} key={i}>
                                 <div className="searchListItemBlock">
                                     <div className="searchListItem">{item.name}</div>
                                 </div>

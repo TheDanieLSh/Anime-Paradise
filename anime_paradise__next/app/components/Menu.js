@@ -1,10 +1,10 @@
 //ПОФИКСИТЬ
 'use client'
 import { useEffect } from 'react';
-import { Link } from 'next/link';
+import Link from 'next/link';
 
-export default function Menu() {
-    const { section } = useParams();
+export default function Menu({ params }) {
+    const { section } = { params };
     let sectionName;
     switch (section) {
         case 'figures':
@@ -52,7 +52,6 @@ export default function Menu() {
             const mobileMenu = document.querySelector('.mobile_menu');
             if (e.target.closest('.mobile_menu')) {
                 mobileMenu.classList.toggle('has-open');
-                console.log('pizda');
             } else {
                 mobileMenu.classList.remove('has-open')
             }
@@ -76,26 +75,26 @@ export default function Menu() {
             <div className='desktop_menu'>
                 <ul>
                     <li>
-                        <Link to="/">Главная</Link>
+                        <Link href="/">Главная</Link>
                     </li>
                     <li>
-                        <Link to="/figures/1">Фигурки</Link>
+                        <Link href="/figures/1">Фигурки</Link>
                     </li>
                     <li>
-                        <Link to="/dakimakuras/1">Дакимакуры</Link>
+                        <Link href="/dakimakuras/1">Дакимакуры</Link>
                     </li>
                     <li>
-                        <Link to="/manga/1">Манга</Link>
+                        <Link href="/manga/1">Манга</Link>
                     </li>
                     <li>
-                        <Link to="/other/1">Прочий мерч</Link>
+                        <Link href="/other/1">Прочий мерч</Link>
                     </li>
                 </ul>
             </div>
             <div className='mobile_menu'>
                 <div className='currentSection'>{sectionName}</div>
                 <ul className='menuList'>
-                    {currentList.map(item => <li key={item.url}><Link to={'/' + item.url}>{item.russian}</Link></li>)}
+                    {currentList.map(item => <li key={item.url}><Link href={'/' + item.url}>{item.russian}</Link></li>)}
                 </ul>
             </div>
         </nav>

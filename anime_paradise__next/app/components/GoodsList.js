@@ -17,8 +17,8 @@ export default function GoodsList(props, { params }) {
 
     const products = useSelector(state => state.fetchDataReducer.products);
 
-    const firstProduct = (params.page_number - 1) * 8;
-    const lastProduct = firstProduct + 8;
+    const firstProduct = params.section_page ? (params.section_page - 1) * 8 : null;
+    const lastProduct = firstProduct ? firstProduct + 8 : null;
     let currentPageProducts = [];
 
     if (goods != 'search') {
@@ -52,10 +52,10 @@ export default function GoodsList(props, { params }) {
             {products && currentPageProducts.map((good, i) => (
                 <div className="productCard" key={i}>
                     <div className="productPicture">
-                        <Link to={"/" + "product" + "/" + good.id}><img src={good.pic} alt="ОШИБКА" /></Link>
+                        <Link href={"/" + "product" + "/" + good.id}><img src={good.pic} alt="ОШИБКА" /></Link>
                     </div>
                     <div className="productNameBlock">
-                        <Link to={"/" + "product" + "/" + good.id}><h3 className="productName">{good.name}</h3></Link>
+                        <Link href={"/" + "product" + "/" + good.id}><h3 className="productName">{good.name}</h3></Link>
                     </div>
                 </div>
             ))}
