@@ -19,8 +19,8 @@ export default function GoodsList(props) {
 
     const products = useSelector(state => state.fetchDataReducer.products);
 
-    const firstProduct = params.section_page ? (params.section_page - 1) * 8 : null;
-    const lastProduct = firstProduct ? firstProduct + 8 : null;
+    const firstProduct = (params.section_page - 1) * 8;
+    const lastProduct = firstProduct + 8;
     let currentPageProducts = [];
 
     if (goods != 'search') {
