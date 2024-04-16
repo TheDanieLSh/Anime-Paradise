@@ -1,8 +1,7 @@
 'use client'
-import { useDispatch, useSelector } from "react-redux";
-import { useEffect, useState } from "react";
+import { useSelector } from "react-redux";
+import { useState } from "react";
 import Link from "next/link";
-import { fetchProducts } from "../redux/fetchDataReducer";
 
 let searchItem;
 let foundItems = [];
@@ -10,11 +9,6 @@ let listVisability = false;
 let searchLink;
 
 export default function SearchBar() {
-    const dispatch = useDispatch();
-    useEffect(() => {
-        dispatch(fetchProducts());
-    }, [dispatch])
-
     const [inputRerender, doInputRerender] = useState(null);
     const products = useSelector(state => state.fetchDataReducer.products);
     function handleChange(e) {

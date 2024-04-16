@@ -1,6 +1,6 @@
 import GoodsList from "./components/GoodsList"
 
-export default function() {
+export default function PageContent() {
     return (
         <div className="pageContent" data-main="true">
             <h2>Новинки</h2>
